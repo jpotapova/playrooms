@@ -8,14 +8,12 @@
 }
 
 .store-list {
-  width: 400px;
   height: 400px;
   background: white;
 }
 
 .store-list-container {
-  width: 400px;
-  height: 400px;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -46,4 +44,6 @@
   transition-property: width, visibility;
   width: 0;
   height: auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
