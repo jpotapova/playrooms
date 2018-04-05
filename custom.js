@@ -13,5 +13,11 @@ $(function() {
     var map = new google.maps.Map(mapCanvas, mapOptions);
   }
 
-  google.maps.event.addDomListener(window, 'load', initMap);
+  function init() {
+    google.maps.event.addDomListener(window, 'load', initMap);
+    var storeListW = $('.store-list').width();
+    $('.store-list').css('width', storeListW);
+  }
+
+  init();
 });
