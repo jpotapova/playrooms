@@ -15,8 +15,20 @@ $(function() {
 
   function init() {
     google.maps.event.addDomListener(window, 'load', initMap);
-    var storeListW = $('.store-list').width();
+    setWidth();
+    toggleList();
+  }
+
+  function setWidth() {
+    var storeListW = $('.store-list').outerWidth();
     $('.store-list').css('width', storeListW);
+  }
+
+  function toggleList() {
+    $('#toggle-list').click(function() {
+      $('#show-list').toggleClass('hidden');
+      $('#hide-list').toggleClass('hidden');
+    });
   }
 
   init();
