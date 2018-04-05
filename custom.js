@@ -11,6 +11,29 @@ $(function() {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    var marker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(54.679479, 25.285295),
+      map: map,
+      title: 'Point 1'
+    });
+    var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(54.687626, 25.287577),
+      map: map,
+      title: 'Point 2'
+    });
+    var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(54.685884, 25.295608),
+      map: map,
+      title: 'Point 3'
+    });
+
+    var markers = []; //some array
+    var bounds = new google.maps.LatLngBounds();
+    bounds.extend(marker1.getPosition());
+    bounds.extend(marker2.getPosition());
+    bounds.extend(marker3.getPosition());
+    map.fitBounds(bounds);
   }
 
   function init() {
