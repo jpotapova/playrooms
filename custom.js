@@ -1,4 +1,5 @@
 $(function() {
+  var map;
   function initMap() {
     var location = new google.maps.LatLng(54.679408, 25.284144);
     var mapCanvas = document.getElementById('map');
@@ -10,12 +11,15 @@ $(function() {
       streetViewControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
+    map = new google.maps.Map(mapCanvas, mapOptions);
 
     var marker1 = new google.maps.Marker({
       position: new google.maps.LatLng(54.679479, 25.285295),
       map: map,
       title: 'Point 1'
+    });
+    marker1.addListener('click', function() {
+      $('#store-list-wrapper').collapse('toggle');
     });
     var marker2 = new google.maps.Marker({
       position: new google.maps.LatLng(54.687626, 25.287577),
@@ -40,6 +44,7 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initMap);
     setWidth();
     toggleList();
+    showMap();
   }
 
   function setWidth() {
@@ -48,9 +53,21 @@ $(function() {
   }
 
   function toggleList() {
-    $('#toggle-list').click(function() {
-      $('#show-list').toggleClass('hidden');
-      $('#hide-list').toggleClass('hidden');
+    $('#store-list-wrapper').on('hidden.bs.collapse', function() {
+      $('#show-list').removeClass('hidden');
+      $('#hide-list').addClass('hidden');
+    });
+    $('#store-list-wrapper').on('shown.bs.collapse', function() {
+      $('#show-list').addClass('hidden');
+      $('#hide-list').removeClass('hidden');
+    });
+  }
+
+  function showMap() {
+    $('#map-1').click(function() {
+      $('#store-list-wrapper').collapse('toggle');
+      var latLng = new google.maps.LatLng(54.679479, 25.285295); //marker 1
+      map.setCenter(latLng);
     });
   }
 
