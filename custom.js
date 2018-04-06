@@ -18,6 +18,7 @@ $(function() {
       map: map,
       title: 'Point 1'
     });
+
     marker1.addListener('click', function() {
       $('#store-list-wrapper').collapse('toggle');
     });
@@ -40,35 +41,68 @@ $(function() {
     map.fitBounds(bounds);
   }
 
-  function init() {
-    google.maps.event.addDomListener(window, 'load', initMap);
-    setWidth();
-    toggleList();
-    showMap();
-  }
-
   function setWidth() {
     var storeListW = $('.store-list').outerWidth();
     $('.store-list').css('width', storeListW);
   }
 
+  var animations = {
+    toggleList: function() {
+      $('.store-list-container').animate(
+        {
+          width: 'toggle'
+        },
+        function() {
+          $('#show-list, #hide-list').toggleClass('hidden');
+        }
+      );
+    }
+  };
+
   function toggleList() {
-    $('#store-list-wrapper').on('hidden.bs.collapse', function() {
-      $('#show-list').removeClass('hidden');
-      $('#hide-list').addClass('hidden');
-    });
-    $('#store-list-wrapper').on('shown.bs.collapse', function() {
-      $('#show-list').addClass('hidden');
-      $('#hide-list').removeClass('hidden');
-    });
+    $('#toggle-list').click(animations.toggleList);
   }
 
   function showMap() {
-    $('#map-1').click(function() {
-      $('#store-list-wrapper').collapse('toggle');
+    $('.more-details .to-map').click(function() {
+      animations.toggleList();
       var latLng = new google.maps.LatLng(54.679479, 25.285295); //marker 1
       map.setCenter(latLng);
     });
+  }
+
+  function accordion() {
+    $('.list-group-item').click(function() {
+      if (
+        $(this)
+          .find('.more-details')
+          .is(':hidden')
+      ) {
+        $('.list-group-item').hide();
+        $(this)
+          .find('.more-details')
+          .show();
+        $(this).fadeIn();
+      }
+    });
+  }
+
+  function toList() {
+    $('.to-list').click(function() {
+      $('.list-group-item').fadeOut(function() {
+        $('.list-group-item .more-details').hide();
+        $('.list-group-item').fadeIn();
+      });
+    });
+  }
+
+  function init() {
+    google.maps.event.addDomListener(window, 'load', initMap);
+    setWidth();
+    toggleList();
+    showMap();
+    toList();
+    accordion();
   }
 
   init();
