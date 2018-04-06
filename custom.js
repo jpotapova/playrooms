@@ -19,9 +19,7 @@ $(function() {
       title: 'Point 1'
     });
 
-    marker1.addListener('click', function() {
-      $('#store-list-wrapper').collapse('toggle');
-    });
+    marker1.addListener('click', animations.toggleList);
     var marker2 = new google.maps.Marker({
       position: new google.maps.LatLng(54.687626, 25.287577),
       map: map,
