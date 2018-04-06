@@ -39,11 +39,6 @@ $(function() {
     map.fitBounds(bounds);
   }
 
-  function setWidth() {
-    var storeListW = $('.store-list').outerWidth();
-    $('.store-list').css('width', storeListW);
-  }
-
   var animations = {
     toggleList: function() {
       $('.store-list-container').animate(
@@ -96,7 +91,6 @@ $(function() {
 
   function init() {
     google.maps.event.addDomListener(window, 'load', initMap);
-    setWidth();
     toggleList();
     showMap();
     toList();
