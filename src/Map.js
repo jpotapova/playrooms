@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Map = () => (
-  <div id="map" class="map">
-    Map goes here
+  <div id="map" className="map">
+    map goes here
   </div>
 );
 

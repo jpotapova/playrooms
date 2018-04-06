@@ -6,34 +6,34 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div class="page-header">
+        <div className="page-header">
           <h1>Store locator template</h1>
         </div>
 
-        <button id="toggle-list" class="btn btn-info toggle-list">
+        <button id="toggle-list" className="btn btn-info toggle-list">
           <span id="hide-list">
             Hide info &nbsp;
-            <span class="glyphicon glyphicon-menu-left" />
+            <span className="glyphicon glyphicon-menu-left" />
           </span>
-          <span class="hidden" id="show-list">
+          <span className="hidden" id="show-list">
             Show info &nbsp;
-            <span class="glyphicon glyphicon-menu-right" />
+            <span className="glyphicon glyphicon-menu-right" />
           </span>
         </button>
 
-        <div class="store-locator">
-          <div class="store-list-container">
-            <div class="store-list list-group">
-              <div class="list-group-item">
-                <span class="badge">2 km</span>
-                <h4 class="list-group-item-heading">Title</h4>
-                <p class="list-group-item-text">Area, Street Address 123</p>
-                <p class="list-group-item-text">
+        <div className="store-locator">
+          <div className="store-list-container">
+            <div className="store-list list-group">
+              <div className="list-group-item">
+                <span className="badge">2 km</span>
+                <h4 className="list-group-item-heading">Title</h4>
+                <p className="list-group-item-text">Area, Street Address 123</p>
+                <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
-                <div class="more-details">
+                <div className="more-details">
                   <p>&nbsp;</p>
-                  <table class="working-hours table table-condensed">
+                  <table className="working-hours table table-condensed">
                     <tr>
                       <th>I-V</th>
                       <td>10:00 &mdash; 20:00</td>
@@ -46,7 +46,7 @@ class App extends Component {
                       <th>VII</th>
                       <td>Closed</td>
                     </tr>
-                    <tr class="last-row">
+                    <tr className="last-row">
                       <th />
                       <td />
                     </tr>
@@ -55,26 +55,26 @@ class App extends Component {
 
                   <p>
                     &nbsp;
-                    <button class="btn btn-info to-list" type="button">
-                      Back&nbsp;<span class="glyphicon glyphicon-list" />
+                    <button className="btn btn-info to-list" type="button">
+                      Back&nbsp;<span className="glyphicon glyphicon-list" />
                     </button>
                     &nbsp;&nbsp;
-                    <button class="btn btn-info to-map" type="button">
-                      View map&nbsp;<span class="glyphicon glyphicon-map-marker" />
+                    <button className="btn btn-info to-map" type="button">
+                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
                     </button>
                   </p>
                 </div>
               </div>
-              <div class="list-group-item">
-                <span class="badge">2 km</span>
-                <h4 class="list-group-item-heading">Title</h4>
-                <p class="list-group-item-text">Area, Street Address 123</p>
-                <p class="list-group-item-text">
+              <div className="list-group-item">
+                <span className="badge">2 km</span>
+                <h4 className="list-group-item-heading">Title</h4>
+                <p className="list-group-item-text">Area, Street Address 123</p>
+                <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
-                <div class="more-details">
+                <div className="more-details">
                   <p>&nbsp;</p>
-                  <table class="working-hours table table-condensed">
+                  <table className="working-hours table table-condensed">
                     <tr>
                       <th>I-V</th>
                       <td>10:00 &mdash; 20:00</td>
@@ -87,7 +87,7 @@ class App extends Component {
                       <th>VII</th>
                       <td>Closed</td>
                     </tr>
-                    <tr class="last-row">
+                    <tr className="last-row">
                       <th />
                       <td />
                     </tr>
@@ -96,26 +96,26 @@ class App extends Component {
 
                   <p>
                     &nbsp;
-                    <button class="btn btn-info to-list" type="button">
-                      Back&nbsp;<span class="glyphicon glyphicon-list" />
+                    <button className="btn btn-info to-list" type="button">
+                      Back&nbsp;<span className="glyphicon glyphicon-list" />
                     </button>
                     &nbsp;&nbsp;
-                    <button class="btn btn-info to-map" type="button">
-                      View map&nbsp;<span class="glyphicon glyphicon-map-marker" />
+                    <button className="btn btn-info to-map" type="button">
+                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
                     </button>
                   </p>
                 </div>
               </div>
-              <div class="list-group-item">
-                <span class="badge">2 km</span>
-                <h4 class="list-group-item-heading">Title</h4>
-                <p class="list-group-item-text">Area, Street Address 123</p>
-                <p class="list-group-item-text">
+              <div className="list-group-item">
+                <span className="badge">2 km</span>
+                <h4 className="list-group-item-heading">Title</h4>
+                <p className="list-group-item-text">Area, Street Address 123</p>
+                <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
-                <div class="more-details">
+                <div className="more-details">
                   <p>&nbsp;</p>
-                  <table class="working-hours table table-condensed">
+                  <table className="working-hours table table-condensed">
                     <tr>
                       <th>I-V</th>
                       <td>10:00 &mdash; 20:00</td>
@@ -128,7 +128,7 @@ class App extends Component {
                       <th>VII</th>
                       <td>Closed</td>
                     </tr>
-                    <tr class="last-row">
+                    <tr className="last-row">
                       <th />
                       <td />
                     </tr>
@@ -137,26 +137,26 @@ class App extends Component {
 
                   <p>
                     &nbsp;
-                    <button class="btn btn-info to-list" type="button">
-                      Back&nbsp;<span class="glyphicon glyphicon-list" />
+                    <button className="btn btn-info to-list" type="button">
+                      Back&nbsp;<span className="glyphicon glyphicon-list" />
                     </button>
                     &nbsp;&nbsp;
-                    <button class="btn btn-info to-map" type="button">
-                      View map&nbsp;<span class="glyphicon glyphicon-map-marker" />
+                    <button className="btn btn-info to-map" type="button">
+                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
                     </button>
                   </p>
                 </div>
               </div>
-              <div class="list-group-item">
-                <span class="badge">2 km</span>
-                <h4 class="list-group-item-heading">Title</h4>
-                <p class="list-group-item-text">Area, Street Address 123</p>
-                <p class="list-group-item-text">
+              <div className="list-group-item">
+                <span className="badge">2 km</span>
+                <h4 className="list-group-item-heading">Title</h4>
+                <p className="list-group-item-text">Area, Street Address 123</p>
+                <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
-                <div class="more-details">
+                <div className="more-details">
                   <p>&nbsp;</p>
-                  <table class="working-hours table table-condensed">
+                  <table className="working-hours table table-condensed">
                     <tr>
                       <th>I-V</th>
                       <td>10:00 &mdash; 20:00</td>
@@ -169,7 +169,7 @@ class App extends Component {
                       <th>VII</th>
                       <td>Closed</td>
                     </tr>
-                    <tr class="last-row">
+                    <tr className="last-row">
                       <th />
                       <td />
                     </tr>
@@ -178,26 +178,26 @@ class App extends Component {
 
                   <p>
                     &nbsp;
-                    <button class="btn btn-info to-list" type="button">
-                      Back&nbsp;<span class="glyphicon glyphicon-list" />
+                    <button className="btn btn-info to-list" type="button">
+                      Back&nbsp;<span className="glyphicon glyphicon-list" />
                     </button>
                     &nbsp;&nbsp;
-                    <button class="btn btn-info to-map" type="button">
-                      View map&nbsp;<span class="glyphicon glyphicon-map-marker" />
+                    <button className="btn btn-info to-map" type="button">
+                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
                     </button>
                   </p>
                 </div>
               </div>
-              <div class="list-group-item">
-                <span class="badge">2 km</span>
-                <h4 class="list-group-item-heading">Title</h4>
-                <p class="list-group-item-text">Area, Street Address 123</p>
-                <p class="list-group-item-text">
+              <div className="list-group-item">
+                <span className="badge">2 km</span>
+                <h4 className="list-group-item-heading">Title</h4>
+                <p className="list-group-item-text">Area, Street Address 123</p>
+                <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
-                <div class="more-details">
+                <div className="more-details">
                   <p>&nbsp;</p>
-                  <table class="working-hours table table-condensed">
+                  <table className="working-hours table table-condensed">
                     <tr>
                       <th>I-V</th>
                       <td>10:00 &mdash; 20:00</td>
@@ -210,7 +210,7 @@ class App extends Component {
                       <th>VII</th>
                       <td>Closed</td>
                     </tr>
-                    <tr class="last-row">
+                    <tr className="last-row">
                       <th />
                       <td />
                     </tr>
@@ -219,26 +219,26 @@ class App extends Component {
 
                   <p>
                     &nbsp;
-                    <button class="btn btn-info to-list" type="button">
-                      Back&nbsp;<span class="glyphicon glyphicon-list" />
+                    <button className="btn btn-info to-list" type="button">
+                      Back&nbsp;<span className="glyphicon glyphicon-list" />
                     </button>
                     &nbsp;&nbsp;
-                    <button class="btn btn-info to-map" type="button">
-                      View map&nbsp;<span class="glyphicon glyphicon-map-marker" />
+                    <button className="btn btn-info to-map" type="button">
+                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
                     </button>
                   </p>
                 </div>
               </div>
-              <div class="list-group-item">
-                <span class="badge">2 km</span>
-                <h4 class="list-group-item-heading">Title</h4>
-                <p class="list-group-item-text">Area, Street Address 123</p>
-                <p class="list-group-item-text">
+              <div className="list-group-item">
+                <span className="badge">2 km</span>
+                <h4 className="list-group-item-heading">Title</h4>
+                <p className="list-group-item-text">Area, Street Address 123</p>
+                <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
-                <div class="more-details">
+                <div className="more-details">
                   <p>&nbsp;</p>
-                  <table class="working-hours table table-condensed">
+                  <table className="working-hours table table-condensed">
                     <tr>
                       <th>I-V</th>
                       <td>10:00 &mdash; 20:00</td>
@@ -251,7 +251,7 @@ class App extends Component {
                       <th>VII</th>
                       <td>Closed</td>
                     </tr>
-                    <tr class="last-row">
+                    <tr className="last-row">
                       <th />
                       <td />
                     </tr>
@@ -260,12 +260,12 @@ class App extends Component {
 
                   <p>
                     &nbsp;
-                    <button class="btn btn-info to-list" type="button">
-                      Back&nbsp;<span class="glyphicon glyphicon-list" />
+                    <button className="btn btn-info to-list" type="button">
+                      Back&nbsp;<span className="glyphicon glyphicon-list" />
                     </button>
                     &nbsp;&nbsp;
-                    <button class="btn btn-info to-map" type="button">
-                      View map&nbsp;<span class="glyphicon glyphicon-map-marker" />
+                    <button className="btn btn-info to-map" type="button">
+                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
                     </button>
                   </p>
                 </div>
