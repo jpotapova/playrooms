@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Map } from './Map.js';
 import './App.css';
 
 class App extends Component {
@@ -272,7 +272,8 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div id="map" class="map" />
+
+          <Map />
         </div>
       </div>
     );
