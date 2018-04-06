@@ -20,29 +20,3 @@
   left: 0;
   z-index: 1;
 }
-
-/* additional functionality for bootstrap 3 collapse plugin
-   allow horizontal animation */
-.collapse {
-  visibility: hidden;
-}
-.collapse.in {
-  visibility: visible;
-}
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition-property: height, visibility;
-  transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
-  transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-.collapsing.width {
-  -webkit-transition-property: width, visibility;
-  transition-property: width, visibility;
-  width: 0;
-  height: auto;
-}
