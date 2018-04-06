@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Map } from './Map.js';
 import './App.css';
+import preload from './data';
 
 class App extends Component {
   render() {
@@ -9,6 +10,8 @@ class App extends Component {
         <div className="page-header">
           <h1>Store locator template</h1>
         </div>
+
+        <div>{preload.shows.map(show => <h3>{show.title}</h3>)}</div>
 
         <button id="toggle-list" className="btn btn-info toggle-list">
           <span id="hide-list">
