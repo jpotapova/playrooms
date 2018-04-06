@@ -12,6 +12,7 @@
   background: white;
   opacity: 0.8;
   width: 290px;
+  overflow-y: scroll;
 }
 
 .store-list-container {
@@ -21,7 +22,7 @@
   left: 0;
   z-index: 1;
   height: 400px;
-  overflow-y: scroll;
+  border: 1px solid #ccc;
 }
 
 .more-details {
@@ -30,4 +31,40 @@
 
 .working-hours {
   width: 200px;
+}
+
+.list-group {
+  margin-bottom: 0;
+}
+.list-group-item {
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.list-group-item:first-child {
+  border-top: none;
+  border-radius: 0;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+  border-radius: 0;
+}
+
+@media (min-width: 1025px) {
+  .toggle-list {
+    display: none;
+  }
+
+  .store-list {
+    opacity: 1;
+  }
+
+  .map {
+    margin-left: 290px;
+  }
+
+  .to-map {
+    display: none;
+  }
 }
