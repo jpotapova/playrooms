@@ -5,7 +5,6 @@ class Store extends Component {
   render() {
     return (
       <ListGroupItem>
-        <Badge>2 km</Badge>
         <h4 class="list-group-item-heading">{this.props.title}</h4>
         <p className="list-group-item-text">
           {this.props.area}, {this.props.address}
@@ -15,31 +14,10 @@ class Store extends Component {
             {this.props.web}
           </a>
         </p>
+        <p className="list-group-item-text">tel. {this.props.phone}</p>
         <div className="more-details">
-          <p>&nbsp;</p>
-          <Table condensed>
-            <tbody>
-              <tr>
-                <th>I-V</th>
-                <td>10:00 &mdash; 20:00</td>
-              </tr>
-              <tr>
-                <th>VI</th>
-                <td>10:00 &mdash; 16:00</td>
-              </tr>
-              <tr>
-                <th>VII</th>
-                <td>Closed</td>
-              </tr>
-              <tr className="last-row">
-                <th />
-                <td />
-              </tr>
-            </tbody>
-          </Table>
-          <p>Ticket &euro; 5 / h</p>
-
-          <p>
+          <WorkingHours hours={this.props.hours} />
+          <p className="text-right">
             &nbsp;
             <button className="btn btn-info to-list" type="button">
               Back&nbsp;<span className="glyphicon glyphicon-list" />
@@ -51,6 +29,23 @@ class Store extends Component {
           </p>
         </div>
       </ListGroupItem>
+    );
+  }
+}
+
+class WorkingHours extends Component {
+  render() {
+    return (
+      <Table condensed>
+        <tbody>
+          {this.props.hours.map(day => (
+            <tr>
+              <th>{day[0]}</th>
+              <td>{day[1]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     );
   }
 }

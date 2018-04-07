@@ -25,13 +25,9 @@
   border: 1px solid #ccc;
 }
 
-/* .more-details {
-  display: none;
-} */
-/* 
-.working-hours {
-  width: 200px;
-} */
+.more-details {
+  padding-top: 10px;
+}
 
 .list-group {
   margin-bottom: 0;
