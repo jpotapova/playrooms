@@ -3,7 +3,7 @@ import { Map } from './Map.js';
 import { Store } from './Store.js';
 import './App.css';
 import preload from './data';
-import { ListGroup, ListGroupItem, Badge, Table } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -26,52 +26,7 @@ class App extends Component {
 
         <div className="store-locator">
           <div className="store-list-container">
-            <ListGroup>
-              {preload.stores.map(store => <Store {...store} />)}
-
-              <ListGroupItem header="Heading 1">
-                <Badge>2 km</Badge>
-                <p className="list-group-item-text">Area, Street Address 123</p>
-                <p className="list-group-item-text">
-                  <a href="#">http://www.website.com</a>
-                </p>
-                <div className="more-details">
-                  <p>&nbsp;</p>
-                  <Table condensed>
-                    <tbody>
-                      <tr>
-                        <th>I-V</th>
-                        <td>10:00 &mdash; 20:00</td>
-                      </tr>
-                      <tr>
-                        <th>VI</th>
-                        <td>10:00 &mdash; 16:00</td>
-                      </tr>
-                      <tr>
-                        <th>VII</th>
-                        <td>Closed</td>
-                      </tr>
-                      <tr className="last-row">
-                        <th />
-                        <td />
-                      </tr>
-                    </tbody>
-                  </Table>
-                  <p>Ticket &euro; 5 / h</p>
-
-                  <p>
-                    &nbsp;
-                    <button className="btn btn-info to-list" type="button">
-                      Back&nbsp;<span className="glyphicon glyphicon-list" />
-                    </button>
-                    &nbsp;&nbsp;
-                    <button className="btn btn-info to-map" type="button">
-                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
-                    </button>
-                  </p>
-                </div>
-              </ListGroupItem>
-            </ListGroup>
+            <ListGroup>{preload.stores.map(store => <Store {...store} />)}</ListGroup>
           </div>
 
           <Map />

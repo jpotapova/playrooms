@@ -4,25 +4,33 @@
       "title": "Maxima X",
       "area": "Vilnius",
       "address": "Olandų g. 6",
-      "phone": "852127578"
+      "phone": "852127578",
+      "weblink": "https://www.maxima.lt/parduotuves",
+      "web": "www.maxima.lt"
     },
     {
       "title": "Maxima X",
       "area": "Vilnius",
       "address": "Subačiaus g. 116A",
-      "phone": "852127578"
+      "phone": "852127578",
+      "weblink": "https://www.maxima.lt/parduotuves",
+      "web": "www.maxima.lt"
     },
     {
       "title": "Maxima XXX",
       "area": "Vilnius",
       "address": "Mindaugo g. 11",
-      "phone": "852127578"
+      "phone": "852127578",
+      "weblink": "https://www.maxima.lt/parduotuves",
+      "web": "www.maxima.lt"
     },
     {
       "title": "Maxima XX",
       "area": "Vilnius",
       "address": "Naugarduko g. 84",
-      "phone": "852127578"
+      "phone": "852127578",
+      "weblink": "https://www.maxima.lt/parduotuves",
+      "web": "www.maxima.lt"
     }
   ]
 }
