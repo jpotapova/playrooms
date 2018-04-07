@@ -12,10 +12,7 @@ class App extends Component {
           <h1>Store locator template</h1>
         </div>
 
-        <div>{preload.shows.map(show => <h3>{show.title}</h3>)}</div>
-        <ListGroup>
-          <div>test</div>
-        </ListGroup>
+        {preload.stores.map(store => <h3>{store.title}</h3>)}
 
         <button id="toggle-list" className="btn btn-info toggle-list">
           <span id="hide-list">
