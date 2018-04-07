@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Map } from './Map.js';
 import './App.css';
 import preload from './data';
+import { ListGroup, ListGroupItem, Badge, Table } from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -12,6 +13,9 @@ class App extends Component {
         </div>
 
         <div>{preload.shows.map(show => <h3>{show.title}</h3>)}</div>
+        <ListGroup>
+          <div>test</div>
+        </ListGroup>
 
         <button id="toggle-list" className="btn btn-info toggle-list">
           <span id="hide-list">
@@ -26,34 +30,35 @@ class App extends Component {
 
         <div className="store-locator">
           <div className="store-list-container">
-            <div className="store-list list-group">
-              <div className="list-group-item">
-                <span className="badge">2 km</span>
-                <h4 className="list-group-item-heading">Title</h4>
+            <ListGroup>
+              <ListGroupItem header="Heading 1">
+                <Badge>2 km</Badge>
                 <p className="list-group-item-text">Area, Street Address 123</p>
                 <p className="list-group-item-text">
                   <a href="#">http://www.website.com</a>
                 </p>
                 <div className="more-details">
                   <p>&nbsp;</p>
-                  <table className="working-hours table table-condensed">
-                    <tr>
-                      <th>I-V</th>
-                      <td>10:00 &mdash; 20:00</td>
-                    </tr>
-                    <tr>
-                      <th>VI</th>
-                      <td>10:00 &mdash; 16:00</td>
-                    </tr>
-                    <tr>
-                      <th>VII</th>
-                      <td>Closed</td>
-                    </tr>
-                    <tr className="last-row">
-                      <th />
-                      <td />
-                    </tr>
-                  </table>
+                  <Table condensed>
+                    <tbody>
+                      <tr>
+                        <th>I-V</th>
+                        <td>10:00 &mdash; 20:00</td>
+                      </tr>
+                      <tr>
+                        <th>VI</th>
+                        <td>10:00 &mdash; 16:00</td>
+                      </tr>
+                      <tr>
+                        <th>VII</th>
+                        <td>Closed</td>
+                      </tr>
+                      <tr className="last-row">
+                        <th />
+                        <td />
+                      </tr>
+                    </tbody>
+                  </Table>
                   <p>Ticket &euro; 5 / h</p>
 
                   <p>
@@ -67,213 +72,8 @@ class App extends Component {
                     </button>
                   </p>
                 </div>
-              </div>
-              <div className="list-group-item">
-                <span className="badge">2 km</span>
-                <h4 className="list-group-item-heading">Title</h4>
-                <p className="list-group-item-text">Area, Street Address 123</p>
-                <p className="list-group-item-text">
-                  <a href="#">http://www.website.com</a>
-                </p>
-                <div className="more-details">
-                  <p>&nbsp;</p>
-                  <table className="working-hours table table-condensed">
-                    <tr>
-                      <th>I-V</th>
-                      <td>10:00 &mdash; 20:00</td>
-                    </tr>
-                    <tr>
-                      <th>VI</th>
-                      <td>10:00 &mdash; 16:00</td>
-                    </tr>
-                    <tr>
-                      <th>VII</th>
-                      <td>Closed</td>
-                    </tr>
-                    <tr className="last-row">
-                      <th />
-                      <td />
-                    </tr>
-                  </table>
-                  <p>Ticket &euro; 5 / h</p>
-
-                  <p>
-                    &nbsp;
-                    <button className="btn btn-info to-list" type="button">
-                      Back&nbsp;<span className="glyphicon glyphicon-list" />
-                    </button>
-                    &nbsp;&nbsp;
-                    <button className="btn btn-info to-map" type="button">
-                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
-                    </button>
-                  </p>
-                </div>
-              </div>
-              <div className="list-group-item">
-                <span className="badge">2 km</span>
-                <h4 className="list-group-item-heading">Title</h4>
-                <p className="list-group-item-text">Area, Street Address 123</p>
-                <p className="list-group-item-text">
-                  <a href="#">http://www.website.com</a>
-                </p>
-                <div className="more-details">
-                  <p>&nbsp;</p>
-                  <table className="working-hours table table-condensed">
-                    <tr>
-                      <th>I-V</th>
-                      <td>10:00 &mdash; 20:00</td>
-                    </tr>
-                    <tr>
-                      <th>VI</th>
-                      <td>10:00 &mdash; 16:00</td>
-                    </tr>
-                    <tr>
-                      <th>VII</th>
-                      <td>Closed</td>
-                    </tr>
-                    <tr className="last-row">
-                      <th />
-                      <td />
-                    </tr>
-                  </table>
-                  <p>Ticket &euro; 5 / h</p>
-
-                  <p>
-                    &nbsp;
-                    <button className="btn btn-info to-list" type="button">
-                      Back&nbsp;<span className="glyphicon glyphicon-list" />
-                    </button>
-                    &nbsp;&nbsp;
-                    <button className="btn btn-info to-map" type="button">
-                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
-                    </button>
-                  </p>
-                </div>
-              </div>
-              <div className="list-group-item">
-                <span className="badge">2 km</span>
-                <h4 className="list-group-item-heading">Title</h4>
-                <p className="list-group-item-text">Area, Street Address 123</p>
-                <p className="list-group-item-text">
-                  <a href="#">http://www.website.com</a>
-                </p>
-                <div className="more-details">
-                  <p>&nbsp;</p>
-                  <table className="working-hours table table-condensed">
-                    <tr>
-                      <th>I-V</th>
-                      <td>10:00 &mdash; 20:00</td>
-                    </tr>
-                    <tr>
-                      <th>VI</th>
-                      <td>10:00 &mdash; 16:00</td>
-                    </tr>
-                    <tr>
-                      <th>VII</th>
-                      <td>Closed</td>
-                    </tr>
-                    <tr className="last-row">
-                      <th />
-                      <td />
-                    </tr>
-                  </table>
-                  <p>Ticket &euro; 5 / h</p>
-
-                  <p>
-                    &nbsp;
-                    <button className="btn btn-info to-list" type="button">
-                      Back&nbsp;<span className="glyphicon glyphicon-list" />
-                    </button>
-                    &nbsp;&nbsp;
-                    <button className="btn btn-info to-map" type="button">
-                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
-                    </button>
-                  </p>
-                </div>
-              </div>
-              <div className="list-group-item">
-                <span className="badge">2 km</span>
-                <h4 className="list-group-item-heading">Title</h4>
-                <p className="list-group-item-text">Area, Street Address 123</p>
-                <p className="list-group-item-text">
-                  <a href="#">http://www.website.com</a>
-                </p>
-                <div className="more-details">
-                  <p>&nbsp;</p>
-                  <table className="working-hours table table-condensed">
-                    <tr>
-                      <th>I-V</th>
-                      <td>10:00 &mdash; 20:00</td>
-                    </tr>
-                    <tr>
-                      <th>VI</th>
-                      <td>10:00 &mdash; 16:00</td>
-                    </tr>
-                    <tr>
-                      <th>VII</th>
-                      <td>Closed</td>
-                    </tr>
-                    <tr className="last-row">
-                      <th />
-                      <td />
-                    </tr>
-                  </table>
-                  <p>Ticket &euro; 5 / h</p>
-
-                  <p>
-                    &nbsp;
-                    <button className="btn btn-info to-list" type="button">
-                      Back&nbsp;<span className="glyphicon glyphicon-list" />
-                    </button>
-                    &nbsp;&nbsp;
-                    <button className="btn btn-info to-map" type="button">
-                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
-                    </button>
-                  </p>
-                </div>
-              </div>
-              <div className="list-group-item">
-                <span className="badge">2 km</span>
-                <h4 className="list-group-item-heading">Title</h4>
-                <p className="list-group-item-text">Area, Street Address 123</p>
-                <p className="list-group-item-text">
-                  <a href="#">http://www.website.com</a>
-                </p>
-                <div className="more-details">
-                  <p>&nbsp;</p>
-                  <table className="working-hours table table-condensed">
-                    <tr>
-                      <th>I-V</th>
-                      <td>10:00 &mdash; 20:00</td>
-                    </tr>
-                    <tr>
-                      <th>VI</th>
-                      <td>10:00 &mdash; 16:00</td>
-                    </tr>
-                    <tr>
-                      <th>VII</th>
-                      <td>Closed</td>
-                    </tr>
-                    <tr className="last-row">
-                      <th />
-                      <td />
-                    </tr>
-                  </table>
-                  <p>Ticket &euro; 5 / h</p>
-
-                  <p>
-                    &nbsp;
-                    <button className="btn btn-info to-list" type="button">
-                      Back&nbsp;<span className="glyphicon glyphicon-list" />
-                    </button>
-                    &nbsp;&nbsp;
-                    <button className="btn btn-info to-map" type="button">
-                      View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
-                    </button>
-                  </p>
-                </div>
-              </div>
-            </div>
+              </ListGroupItem>
+            </ListGroup>
           </div>
 
           <Map />

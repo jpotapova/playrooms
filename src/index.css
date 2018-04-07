@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.store-list {
+.list-group {
   height: 400px;
   background: white;
   opacity: 0.8;
@@ -25,13 +25,13 @@
   border: 1px solid #ccc;
 }
 
-.more-details {
+/* .more-details {
   display: none;
-}
-
+} */
+/* 
 .working-hours {
   width: 200px;
-}
+} */
 
 .list-group {
   margin-bottom: 0;
@@ -56,7 +56,7 @@
     display: none;
   }
 
-  .store-list {
+  .list-group {
     opacity: 1;
   }
 
