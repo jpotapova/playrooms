@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroupItem, Badge, Table } from 'react-bootstrap';
+import { ListGroupItem, Table } from 'react-bootstrap';
 
 class Store extends Component {
   render() {

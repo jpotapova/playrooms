@@ -28,11 +28,11 @@ class App extends Component {
         </div>
 
         <Button bsStyle="info" onClick={this.toggleStores}>
-          <span id="hide-list">
+          <span className={this.state.showStores ? undefined : 'hidden'}>
             Hide info &nbsp;
             <span className="glyphicon glyphicon-menu-left" />
           </span>
-          <span className="hidden" id="show-list">
+          <span className={this.state.showStores ? 'hidden' : undefined}>
             Show info &nbsp;
             <span className="glyphicon glyphicon-menu-right" />
           </span>
