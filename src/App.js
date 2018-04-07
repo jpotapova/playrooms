@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map } from './Map.js';
+import { Store } from './Store.js';
 import './App.css';
 import preload from './data';
 import { ListGroup, ListGroupItem, Badge, Table } from 'react-bootstrap';
@@ -11,8 +12,6 @@ class App extends Component {
         <div className="page-header">
           <h1>Store locator template</h1>
         </div>
-
-        {preload.stores.map(store => <h3>{store.title}</h3>)}
 
         <button id="toggle-list" className="btn btn-info toggle-list">
           <span id="hide-list">
@@ -28,6 +27,8 @@ class App extends Component {
         <div className="store-locator">
           <div className="store-list-container">
             <ListGroup>
+              {preload.stores.map(store => <Store {...store} />)}
+
               <ListGroupItem header="Heading 1">
                 <Badge>2 km</Badge>
                 <p className="list-group-item-text">Area, Street Address 123</p>
