@@ -5,7 +5,7 @@ class Store extends Component {
   render() {
     return (
       <ListGroupItem>
-        <h4 class="list-group-item-heading">{this.props.title}</h4>
+        <h4 className="list-group-item-heading">{this.props.title}</h4>
         <p className="list-group-item-text">
           {this.props.area}, {this.props.address}
         </p>
@@ -38,8 +38,8 @@ class WorkingHours extends Component {
     return (
       <Table condensed>
         <tbody>
-          {this.props.hours.map(day => (
-            <tr>
+          {this.props.hours.map((day, index) => (
+            <tr key={index}>
               <th>{day[0]}</th>
               <td>{day[1]}</td>
             </tr>

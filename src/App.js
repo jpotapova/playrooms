@@ -3,9 +3,23 @@ import { Map } from './Map.js';
 import { Store } from './Store.js';
 import './App.css';
 import preload from './data';
-import { ListGroup } from 'react-bootstrap';
+import { ListGroup, Button } from 'react-bootstrap';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showStores: true
+    };
+    this.toggleStores = this.toggleStores.bind(this);
+  }
+
+  toggleStores() {
+    this.setState({
+      showStores: !this.state.showStores
+    });
+  }
+
   render() {
     return (
       <div className="container">
@@ -13,7 +27,7 @@ class App extends Component {
           <h1>Store locator template</h1>
         </div>
 
-        <button id="toggle-list" className="btn btn-info toggle-list">
+        <Button bsStyle="info" onClick={this.toggleStores}>
           <span id="hide-list">
             Hide info &nbsp;
             <span className="glyphicon glyphicon-menu-left" />
@@ -22,13 +36,12 @@ class App extends Component {
             Show info &nbsp;
             <span className="glyphicon glyphicon-menu-right" />
           </span>
-        </button>
+        </Button>
 
         <div className="store-locator">
           <div className="store-list-container">
-            <ListGroup>{preload.stores.map(store => <Store {...store} />)}</ListGroup>
+            <ListGroup>{preload.stores.map((store, index) => <Store {...store} key={index} />)}</ListGroup>
           </div>
-
           <Map />
         </div>
       </div>
