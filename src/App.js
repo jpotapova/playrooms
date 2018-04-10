@@ -3,7 +3,7 @@ import { Map } from './Map.js';
 import { Store } from './Store.js';
 import './App.css';
 import preload from './data';
-import { ListGroup, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +40,11 @@ class App extends Component {
 
         <div className="store-locator">
           <div className="store-list-container">
-            <ListGroup>{preload.stores.map((store, index) => <Store {...store} key={index} />)}</ListGroup>
+            <div
+              className={this.state.showStores ? 'list-group animated slideInLeft' : 'list-group animated slideOutLeft'}
+            >
+              {preload.stores.map((store, index) => <Store {...store} key={index} />)}
+            </div>
           </div>
           <Map />
         </div>

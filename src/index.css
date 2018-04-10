@@ -5,6 +5,7 @@
 
 .store-locator {
   position: relative;
+  overflow-x: hidden;
 }
 
 .list-group {
