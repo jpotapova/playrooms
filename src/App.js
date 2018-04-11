@@ -63,15 +63,13 @@ class App extends Component {
         />
 
         <div className="store-locator">
-          <div className="store-list-container">
-            <StoreList
-              desktop={this.state.desktop}
-              showStores={this.state.showStores}
-              stores={preload.stores}
-              map={this.map}
-              toggleStores={this.toggleStores}
-            />
-          </div>
+          <StoreList
+            desktop={this.state.desktop}
+            showStores={this.state.showStores}
+            stores={preload.stores}
+            map={this.map}
+            toggleStores={this.toggleStores}
+          />
           <Map stores={preload.stores} map={this.map} initMap={this.initMap} showStores={this.showStores} />
         </div>
       </div>
