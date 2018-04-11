@@ -37,7 +37,11 @@ class App extends Component {
           <h1>Store locator template</h1>
         </div>
 
-        <ToggleButton showStores={this.state.showStores} toggleStores={this.toggleStores} />
+        <ToggleButton
+          showStores={this.state.showStores}
+          toggleStores={this.toggleStores}
+          desktop={this.state.desktop}
+        />
 
         <div className="store-locator">
           <div className="store-list-container">

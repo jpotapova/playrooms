@@ -12,7 +12,7 @@ class ToggleButton extends React.Component {
   }
 
   render() {
-    return (
+    const button = this.props.desktop ? null : (
       <Button bsStyle="info" onClick={this.toggleStores}>
         <span className={this.props.showStores ? undefined : 'hidden'}>
           Hide info &nbsp;
@@ -24,6 +24,7 @@ class ToggleButton extends React.Component {
         </span>
       </Button>
     );
+    return button;
   }
 }
 
