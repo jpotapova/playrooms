@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      desktop: true,
       showStores: true
     };
     this.toggleStores = this.toggleStores.bind(this);
@@ -17,6 +18,14 @@ class App extends Component {
   toggleStores() {
     this.setState({
       showStores: !this.state.showStores
+    });
+  }
+
+  componentDidMount() {
+    var mq = window.matchMedia('(min-width: 1025px)');
+    this.setState({ desktop: mq.matches });
+    mq.addListener(e => {
+      this.setState({ desktop: e.matches });
     });
   }
 
@@ -41,7 +50,11 @@ class App extends Component {
         <div className="store-locator">
           <div className="store-list-container">
             <div
-              className={this.state.showStores ? 'list-group animated slideInLeft' : 'list-group animated slideOutLeft'}
+              className={
+                this.state.desktop
+                  ? 'list-group'
+                  : this.state.showStores ? 'list-group animated slideInLeft' : 'list-group animated slideOutLeft'
+              }
             >
               {preload.stores.map((store, index) => <Store {...store} key={index} />)}
             </div>
