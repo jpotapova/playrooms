@@ -47,7 +47,7 @@ class App extends Component {
           <div className="store-list-container">
             <StoreList desktop={this.state.desktop} showStores={this.state.showStores} stores={preload.stores} />
           </div>
-          <Map />
+          <Map stores={preload.stores} />
         </div>
       </div>
     );
