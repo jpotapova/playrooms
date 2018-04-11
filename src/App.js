@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Map } from './Map.js';
 import { Store } from './Store.js';
+import { ToggleButton } from './ToggleButton';
 import './App.css';
 import preload from './data';
-import { Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -36,16 +36,7 @@ class App extends Component {
           <h1>Store locator template</h1>
         </div>
 
-        <Button bsStyle="info" onClick={this.toggleStores}>
-          <span className={this.state.showStores ? undefined : 'hidden'}>
-            Hide info &nbsp;
-            <span className="glyphicon glyphicon-menu-left" />
-          </span>
-          <span className={this.state.showStores ? 'hidden' : undefined}>
-            Show info &nbsp;
-            <span className="glyphicon glyphicon-menu-right" />
-          </span>
-        </Button>
+        <ToggleButton showStores={this.state.showStores} toggleStores={this.toggleStores} />
 
         <div className="store-locator">
           <div className="store-list-container">
