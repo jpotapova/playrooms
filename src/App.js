@@ -16,6 +16,7 @@ class App extends Component {
     this.toggleStores = this.toggleStores.bind(this);
     this.layout = this.layout.bind(this);
     this.initMap = this.initMap.bind(this);
+    this.showStores = this.showStores.bind(this);
 
     this.map = undefined;
   }
@@ -23,6 +24,12 @@ class App extends Component {
   toggleStores() {
     this.setState({
       showStores: !this.state.showStores
+    });
+  }
+
+  showStores() {
+    this.setState({
+      showStores: true
     });
   }
 
@@ -65,7 +72,7 @@ class App extends Component {
               toggleStores={this.toggleStores}
             />
           </div>
-          <Map stores={preload.stores} map={this.map} initMap={this.initMap} />
+          <Map stores={preload.stores} map={this.map} initMap={this.initMap} showStores={this.showStores} />
         </div>
       </div>
     );

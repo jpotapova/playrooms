@@ -10,9 +10,9 @@ class Map extends Component {
       position: position,
       map: map
     });
-    marker.addListener('click', function() {
-      console.log('click');
+    marker.addListener('click', () => {
       map.panTo(position);
+      this.props.showStores();
     });
     bounds.extend(position);
   }
