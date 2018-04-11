@@ -18,7 +18,9 @@
       "phone": "852127578",
       "weblink": "https://www.maxima.lt/parduotuves",
       "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]]
+      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
+      "lat": 54.675032,
+      "lng": 25.319212
     },
     {
       "title": "Maxima XXX",
@@ -27,7 +29,9 @@
       "phone": "852127578",
       "weblink": "https://www.maxima.lt/parduotuves",
       "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]]
+      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
+      "lat": 54.678306,
+      "lng": 25.272737
     },
     {
       "title": "Maxima XX",
@@ -36,7 +40,9 @@
       "phone": "852127578",
       "weblink": "https://www.maxima.lt/parduotuves",
       "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]]
+      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
+      "lat": 54.669672,
+      "lng": 25.258461
     }
   ]
 }
