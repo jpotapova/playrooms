@@ -10,6 +10,8 @@ class Map extends Component {
       center: { lat: 54.679408, lng: 25.284144 },
       zoom: 16
     });
+    this.props.initMap(map);
+
     var bounds = new google.maps.LatLngBounds();
 
     this.props.stores.forEach(store => {

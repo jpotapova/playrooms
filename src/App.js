@@ -14,6 +14,10 @@ class App extends Component {
       showStores: true
     };
     this.toggleStores = this.toggleStores.bind(this);
+    this.layout = this.layout.bind(this);
+    this.initMap = this.initMap.bind(this);
+
+    this.map = undefined;
   }
 
   toggleStores() {
@@ -22,8 +26,16 @@ class App extends Component {
     });
   }
 
+  initMap(map) {
+    this.map = map;
+  }
+
   componentDidMount() {
-    var mq = window.matchMedia('(min-width: 1025px)');
+    this.layout();
+  }
+
+  layout() {
+    const mq = window.matchMedia('(min-width: 1025px)');
     this.setState({ desktop: mq.matches });
     mq.addListener(e => {
       this.setState({ desktop: e.matches });
@@ -45,9 +57,15 @@ class App extends Component {
 
         <div className="store-locator">
           <div className="store-list-container">
-            <StoreList desktop={this.state.desktop} showStores={this.state.showStores} stores={preload.stores} />
+            <StoreList
+              desktop={this.state.desktop}
+              showStores={this.state.showStores}
+              stores={preload.stores}
+              map={this.map}
+              toggleStores={this.toggleStores}
+            />
           </div>
-          <Map stores={preload.stores} />
+          <Map stores={preload.stores} map={this.map} initMap={this.initMap} />
         </div>
       </div>
     );

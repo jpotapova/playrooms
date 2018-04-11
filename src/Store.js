@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { ListGroupItem, Table } from 'react-bootstrap';
 
 class Store extends Component {
+  constructor(props) {
+    super(props);
+    this.toMap = this.toMap.bind(this);
+  }
+  toMap() {
+    this.props.map.panTo({ lat: this.props.lat, lng: this.props.lng });
+    this.props.toggleStores();
+  }
   render() {
     return (
       <ListGroupItem>
@@ -23,7 +31,7 @@ class Store extends Component {
               Back&nbsp;<span className="glyphicon glyphicon-list" />
             </button>
             &nbsp;&nbsp;
-            <button className="btn btn-info to-map" type="button">
+            <button className="btn btn-info to-map" type="button" onClick={this.toMap}>
               View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
             </button>
           </p>

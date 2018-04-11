@@ -14,7 +14,9 @@ class StoreList extends React.Component {
             : this.props.showStores ? 'list-group animated slideInLeft' : 'list-group animated slideOutLeft'
         }
       >
-        {this.props.stores.map((store, index) => <Store {...store} key={index} />)}
+        {this.props.stores.map((store, index) => (
+          <Store {...store} key={index} map={this.props.map} toggleStores={this.props.toggleStores} />
+        ))}
       </div>
     );
   }
