@@ -3,28 +3,30 @@ import React, { Component } from 'react';
 class Map extends Component {
   constructor(props) {
     super(props);
+    this.addMarker = this.addMarker.bind(this);
+  }
+  addMarker(map, bounds, position) {
+    var marker = new window.google.maps.Marker({
+      position: position,
+      map: map
+    });
+    marker.addListener('click', function() {
+      console.log('click');
+      map.panTo(position);
+    });
+    bounds.extend(position);
   }
   componentDidMount() {
-    const google = window.google;
-    const map = new google.maps.Map(this.refs.map, {
+    const map = new window.google.maps.Map(this.refs.map, {
       center: { lat: 54.679408, lng: 25.284144 },
       zoom: 16
     });
     this.props.initMap(map);
 
-    var bounds = new google.maps.LatLngBounds();
-
+    const bounds = new window.google.maps.LatLngBounds();
     this.props.stores.forEach(store => {
-      if (store.lat && store.lng) {
-        var position = { lat: store.lat, lng: store.lng };
-        new google.maps.Marker({
-          position: { lat: store.lat, lng: store.lng },
-          map: map
-        });
-        bounds.extend(position);
-      }
+      this.addMarker(map, bounds, { lat: store.lat, lng: store.lng });
     });
-
     map.fitBounds(bounds);
   }
   render() {

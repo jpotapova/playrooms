@@ -15,9 +15,6 @@
   width: 290px;
   overflow-y: scroll;
   border: 1px solid #ccc;
-}
-
-.store-list-container {
   position: absolute;
   top: 0;
   left: 0;
