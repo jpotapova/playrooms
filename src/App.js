@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Map } from './Map.js';
-import { Store } from './Store.js';
-import { ToggleButton } from './ToggleButton';
 import './App.css';
 import preload from './data';
+
+import { Map } from './Map.js';
+import { ToggleButton } from './ToggleButton';
+import { StoreList } from './StoreList';
 
 class App extends Component {
   constructor(props) {
@@ -40,15 +41,7 @@ class App extends Component {
 
         <div className="store-locator">
           <div className="store-list-container">
-            <div
-              className={
-                this.state.desktop
-                  ? 'list-group'
-                  : this.state.showStores ? 'list-group animated slideInLeft' : 'list-group animated slideOutLeft'
-              }
-            >
-              {preload.stores.map((store, index) => <Store {...store} key={index} />)}
-            </div>
+            <StoreList desktop={this.state.desktop} showStores={this.state.showStores} stores={preload.stores} />
           </div>
           <Map />
         </div>
