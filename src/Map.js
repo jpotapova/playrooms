@@ -5,14 +5,14 @@ class Map extends Component {
     super(props);
     this.addMarker = this.addMarker.bind(this);
   }
-  addMarker(map, bounds, position) {
+  addMarker(map, bounds, index, position) {
     var marker = new window.google.maps.Marker({
       position: position,
       map: map
     });
     marker.addListener('click', () => {
       map.panTo(position);
-      this.props.showStores();
+      this.props.showStore(index);
     });
     bounds.extend(position);
   }
@@ -24,8 +24,8 @@ class Map extends Component {
     this.props.initMap(map);
 
     const bounds = new window.google.maps.LatLngBounds();
-    this.props.stores.forEach(store => {
-      this.addMarker(map, bounds, { lat: store.lat, lng: store.lng });
+    this.props.stores.forEach((store, index) => {
+      this.addMarker(map, bounds, index, { lat: store.lat, lng: store.lng });
     });
     map.fitBounds(bounds);
   }

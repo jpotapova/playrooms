@@ -11,13 +11,14 @@ class App extends Component {
     super(props);
     this.state = {
       desktop: true,
-      showStores: true
+      showStores: true,
+      openStore: -1
     };
     this.toggleStores = this.toggleStores.bind(this);
     this.layout = this.layout.bind(this);
     this.initMap = this.initMap.bind(this);
-    this.showStores = this.showStores.bind(this);
-
+    this.showStore = this.showStore.bind(this);
+    this.backToList = this.backToList.bind(this);
     this.map = undefined;
   }
 
@@ -27,10 +28,12 @@ class App extends Component {
     });
   }
 
-  showStores() {
-    this.setState({
-      showStores: true
-    });
+  showStore(id) {
+    this.setState({ openStore: id });
+  }
+
+  backToList() {
+    this.setState({ openStore: -1 });
   }
 
   initMap(map) {
@@ -65,11 +68,14 @@ class App extends Component {
         <div className="store-locator">
           <StoreList
             desktop={this.state.desktop}
+            showStore={this.showStore}
             showStores={this.state.showStores}
             stores={preload.stores}
             map={this.map}
+            openStore={this.state.openStore}
+            backToList={this.backToList}
           />
-          <Map stores={preload.stores} map={this.map} initMap={this.initMap} showStores={this.showStores} />
+          <Map stores={preload.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
         </div>
       </div>
     );
