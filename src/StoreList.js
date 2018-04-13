@@ -31,7 +31,6 @@ class StoreList extends React.Component {
             {...store}
             key={index}
             map={this.props.map}
-            toggleStores={this.props.toggleStores}
             id={index}
             showStore={this.showStore}
             openStore={this.state.openStore}

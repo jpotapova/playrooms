@@ -4,7 +4,6 @@ import { Table } from 'react-bootstrap';
 class Store extends Component {
   constructor(props) {
     super(props);
-    this.toMap = this.toMap.bind(this);
     this.backToList = this.backToList.bind(this);
     this.showStore = this.showStore.bind(this);
     this.getClass = this.getClass.bind(this);
@@ -20,15 +19,12 @@ class Store extends Component {
     }
     return result;
   }
-  toMap() {
-    this.props.map.panTo({ lat: this.props.lat, lng: this.props.lng });
-    this.props.toggleStores();
-  }
   backToList() {
     this.props.backToList();
   }
   showStore() {
     this.props.showStore(this.props.id);
+    this.props.map.panTo({ lat: this.props.lat, lng: this.props.lng });
   }
   render() {
     return (
@@ -51,10 +47,6 @@ class Store extends Component {
             &nbsp;
             <button className="btn btn-info to-list" type="button" onClick={this.backToList}>
               Back&nbsp;<span className="glyphicon glyphicon-list" />
-            </button>
-            &nbsp;&nbsp;
-            <button className="btn btn-info to-map" type="button" onClick={this.toMap}>
-              View map&nbsp;<span className="glyphicon glyphicon-map-marker" />
             </button>
           </p>
         </div>
