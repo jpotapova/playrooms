@@ -43,6 +43,17 @@
       "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
       "lat": 54.669672,
       "lng": 25.258461
+    },
+    {
+      "title": "Maxima X",
+      "area": "Vilnius",
+      "address": "Geležinkelio g. 16",
+      "phone": "852127578",
+      "weblink": "https://www.maxima.lt/parduotuves",
+      "web": "www.maxima.lt",
+      "hours": [["I-V", "6:00 — 22:00"], ["VI-VII", "7:00 — 21:00"]],
+      "lat": 54.670409,
+      "lng": 25.284323
     }
   ]
 }

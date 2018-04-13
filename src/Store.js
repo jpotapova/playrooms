@@ -23,7 +23,7 @@ class Store extends Component {
           </a>
         </p>
         <p className="list-group-item-text">tel. {this.props.phone}</p>
-        <div className="more-details">
+        <div className="more-details hidden">
           <WorkingHours hours={this.props.hours} />
           <p className="text-right">
             &nbsp;
