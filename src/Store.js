@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
-import { ListGroupItem, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 class Store extends Component {
   constructor(props) {
     super(props);
     this.toMap = this.toMap.bind(this);
+    this.showStore = this.showStore.bind(this);
+    this.getClass = this.getClass.bind(this);
+  }
+  getClass() {
+    var result = 'list-group-item';
+    if (this.props.openStore > -1) {
+      if (this.props.id === this.props.openStore) {
+        result = result + ' animated fadeIn';
+      } else {
+        result = result + ' hidden';
+      }
+    }
+    return result;
   }
   toMap() {
     this.props.map.panTo({ lat: this.props.lat, lng: this.props.lng });
     this.props.toggleStores();
   }
+  showStore() {
+    this.props.showStore(this.props.id);
+  }
   render() {
     return (
-      <ListGroupItem>
+      <div className={this.getClass()} onClick={this.showStore}>
         <h4 className="list-group-item-heading">{this.props.title}</h4>
         <p className="list-group-item-text">
           {this.props.area}, {this.props.address}
@@ -23,7 +39,7 @@ class Store extends Component {
           </a>
         </p>
         <p className="list-group-item-text">tel. {this.props.phone}</p>
-        <div className="more-details hidden">
+        <div className={this.props.openStore === this.props.id ? 'more-details' : 'more-details hidden'}>
           <WorkingHours hours={this.props.hours} />
           <p className="text-right">
             &nbsp;
@@ -36,7 +52,7 @@ class Store extends Component {
             </button>
           </p>
         </div>
-      </ListGroupItem>
+      </div>
     );
   }
 }
