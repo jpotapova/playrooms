@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Store } from './Store.js';
 
 class StoreList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div

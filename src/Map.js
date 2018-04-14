@@ -30,7 +30,7 @@ class Map extends Component {
     // display markers and fit map to show all of them
     var position;
     this.props.stores.forEach((store, index) => {
-      var position = { lat: store.lat, lng: store.lng };
+      position = { lat: store.lat, lng: store.lng };
       markers.push(this.addMarker(map, index, position));
       bounds.extend(position);
     });
