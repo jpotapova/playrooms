@@ -19,7 +19,9 @@ class App extends Component {
     this.initMap = this.initMap.bind(this);
     this.showStore = this.showStore.bind(this);
     this.backToList = this.backToList.bind(this);
+    this.colorMarkers = this.colorMarkers.bind(this);
     this.map = undefined;
+    this.markers = [];
   }
 
   toggleStores() {
@@ -30,14 +32,17 @@ class App extends Component {
 
   showStore(id) {
     this.setState({ openStore: id });
+    this.colorMarkers(id);
   }
 
   backToList() {
     this.setState({ openStore: -1 });
+    this.colorMarkers(-1);
   }
 
-  initMap(map) {
+  initMap(map, markers) {
     this.map = map;
+    this.markers = markers;
   }
 
   componentDidMount() {
@@ -49,6 +54,16 @@ class App extends Component {
     this.setState({ desktop: mq.matches });
     mq.addListener(e => {
       this.setState({ desktop: e.matches });
+    });
+  }
+
+  colorMarkers(index) {
+    this.markers.forEach((marker, markerIndex) => {
+      if (index === markerIndex) {
+        marker.setIcon('./icon-store-red.svg');
+      } else {
+        marker.setIcon('./icon-store-black.svg');
+      }
     });
   }
 
