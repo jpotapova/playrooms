@@ -31,6 +31,7 @@ class Store extends Component {
   render() {
     return (
       <div className={this.getClass()}>
+        <span className={this.props.distance ? 'badge' : 'hidden'}>{this.props.distance} km</span>
         <div className="main-details" onClick={this.showStore}>
           <h4 className="list-group-item-heading">{this.props.title}</h4>
           <p className="list-group-item-text">
@@ -47,7 +48,7 @@ class Store extends Component {
           <WorkingHours hours={this.props.hours} />
           <p className="text-right">
             &nbsp;
-            <button className="btn btn-info to-list" type="button" onClick={this.backToList}>
+            <button className="btn btn-info" type="button" onClick={this.backToList}>
               Back&nbsp;<span className="glyphicon glyphicon-list" />
             </button>
           </p>

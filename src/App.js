@@ -5,15 +5,13 @@ import preload from './data';
 import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
+import { Filters } from './Filters';
+import { getDistanceFromLatLonInKm } from './distanceCalc';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      desktop: true,
-      showStores: true,
-      openStore: -1
-    };
+
     this.toggleStores = this.toggleStores.bind(this);
     this.layout = this.layout.bind(this);
     this.initMap = this.initMap.bind(this);
@@ -21,10 +19,16 @@ class App extends Component {
     this.backToList = this.backToList.bind(this);
     this.colorMarkers = this.colorMarkers.bind(this);
     this.orderStores = this.orderStores.bind(this);
+    this.setLocation = this.setLocation.bind(this);
     this.map = undefined;
     this.markers = [];
-    this.stores = undefined;
-    this.orderStores();
+
+    this.state = {
+      desktop: true,
+      showStores: true,
+      openStore: -1,
+      stores: this.orderStores(preload.stores, 'title')
+    };
   }
 
   toggleStores() {
@@ -78,9 +82,8 @@ class App extends Component {
     });
   }
 
-  orderStores() {
-    const sortBy = 'title';
-    this.stores = preload.stores.sort((store1, store2) => {
+  orderStores(stores, sortBy) {
+    return stores.sort((store1, store2) => {
       if (store1[sortBy] < store2[sortBy]) {
         return -1;
       }
@@ -91,12 +94,26 @@ class App extends Component {
     });
   }
 
+  setLocation(lat, lng) {
+    var stores = this.state.stores.map(store => {
+      var d = getDistanceFromLatLonInKm(lat, lng, store.lat, store.lng);
+      store['distance'] = d.toFixed(1);
+      return store;
+    });
+    stores = this.orderStores(stores, 'distance');
+    this.setState({
+      stores: stores
+    });
+  }
+
   render() {
     return (
       <div className="container">
         <div className="page-header">
           <h1>Store locator template</h1>
         </div>
+
+        <Filters setLocation={this.setLocation} />
 
         <ToggleButton
           showStores={this.state.showStores}
@@ -109,12 +126,12 @@ class App extends Component {
             desktop={this.state.desktop}
             showStore={this.showStore}
             showStores={this.state.showStores}
-            stores={this.stores}
+            stores={this.state.stores}
             map={this.map}
             openStore={this.state.openStore}
             backToList={this.backToList}
           />
-          <Map stores={this.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
+          <Map stores={this.state.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
         </div>
       </div>
     );
