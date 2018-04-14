@@ -44,6 +44,10 @@
   border-radius: 0;
 }
 
+.list-group-item.animated.fadeIn {
+  border-top: 0;
+}
+
 @media (min-width: 1025px) {
   .toggle-list {
     display: none;
