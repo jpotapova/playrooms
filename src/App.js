@@ -25,22 +25,26 @@ class App extends Component {
   }
 
   toggleStores() {
+    // show/hide list of stores
     this.setState({
       showStores: !this.state.showStores
     });
   }
 
   showStore(id) {
+    // view only single store
     this.setState({ openStore: id });
     this.colorMarkers(id);
   }
 
   backToList() {
+    // view full store list
     this.setState({ openStore: -1 });
     this.colorMarkers(-1);
   }
 
   initMap(map, markers) {
+    // save refs to initialised map and markers
     this.map = map;
     this.markers = markers;
   }
@@ -50,6 +54,7 @@ class App extends Component {
   }
 
   layout() {
+    // detect large screen
     const mq = window.matchMedia('(min-width: 1025px)');
     this.setState({ desktop: mq.matches });
     mq.addListener(e => {
@@ -58,10 +63,13 @@ class App extends Component {
   }
 
   colorMarkers(index) {
+    // go through markers and assign appropriate colour
     this.markers.forEach((marker, markerIndex) => {
       if (index === markerIndex) {
+        // active marker is red
         marker.setIcon('./icon-store-red.svg');
       } else {
+        // regular marker is black
         marker.setIcon('./icon-store-black.svg');
       }
     });

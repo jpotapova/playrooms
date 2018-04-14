@@ -9,6 +9,7 @@ class Store extends Component {
     this.getClass = this.getClass.bind(this);
   }
   getClass() {
+    // animate element entrance when single store is seleted
     var result = 'list-group-item';
     if (this.props.openStore > -1) {
       if (this.props.id === this.props.openStore) {
@@ -23,6 +24,7 @@ class Store extends Component {
     this.props.backToList();
   }
   showStore() {
+    // select single store
     this.props.showStore(this.props.id);
     this.props.map.panTo({ lat: this.props.lat, lng: this.props.lng });
   }
