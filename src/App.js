@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import preload from './data';
+import txt from './text';
 
 import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
@@ -95,11 +96,13 @@ class App extends Component {
   }
 
   setLocation(lat, lng) {
+    // update all stores with distance from current location
     var stores = this.state.stores.map(store => {
       var d = getDistanceFromLatLonInKm(lat, lng, store.lat, store.lng);
       store['distance'] = d.toFixed(1);
       return store;
     });
+    // order by distance from my location
     stores = this.orderStores(stores, 'distance');
     this.setState({
       stores: stores
@@ -110,7 +113,7 @@ class App extends Component {
     return (
       <div className="container">
         <div className="page-header">
-          <h1>Store locator template</h1>
+          <h1>{txt.title}</h1>
         </div>
 
         <Filters setLocation={this.setLocation} />

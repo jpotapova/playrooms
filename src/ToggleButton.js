@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import txt from './text';
 
 class ToggleButton extends React.Component {
   constructor(props) {
@@ -15,11 +16,11 @@ class ToggleButton extends React.Component {
     const button = this.props.desktop ? null : (
       <Button bsStyle="info" onClick={this.toggleStores}>
         <span className={this.props.showStores ? undefined : 'hidden'}>
-          Hide info &nbsp;
+          {txt.hide}
           <span className="glyphicon glyphicon-menu-left" />
         </span>
         <span className={this.props.showStores ? 'hidden' : undefined}>
-          Show info &nbsp;
+          {txt.show}
           <span className="glyphicon glyphicon-menu-right" />
         </span>
       </Button>

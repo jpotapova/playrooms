@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+import txt from './text';
 
 class Filters extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class Filters extends Component {
     return (
       <div className="filters">
         <Button bsStyle="info" onClick={this.myLocation}>
-          Distance from my location
+          {txt.distance}
         </Button>
         <span className={this.state.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
           <span className="glyphicon glyphicon-repeat fast-right-spinner" />

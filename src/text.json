@@ -1,0 +1,9 @@
+{
+  "title": "Store locator template",
+  "distance": "Distance from my location",
+  "show": "Show info ",
+  "hide": "Hide info ",
+  "back": "Back ",
+  "phone": "tel. ",
+  "measurement": " km"
+}
