@@ -20,8 +20,11 @@ class App extends Component {
     this.showStore = this.showStore.bind(this);
     this.backToList = this.backToList.bind(this);
     this.colorMarkers = this.colorMarkers.bind(this);
+    this.orderStores = this.orderStores.bind(this);
     this.map = undefined;
     this.markers = [];
+    this.stores = undefined;
+    this.orderStores();
   }
 
   toggleStores() {
@@ -75,6 +78,19 @@ class App extends Component {
     });
   }
 
+  orderStores() {
+    const sortBy = 'title';
+    this.stores = preload.stores.sort((store1, store2) => {
+      if (store1[sortBy] < store2[sortBy]) {
+        return -1;
+      }
+      if (store1[sortBy] > store2[sortBy]) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+
   render() {
     return (
       <div className="container">
@@ -93,12 +109,12 @@ class App extends Component {
             desktop={this.state.desktop}
             showStore={this.showStore}
             showStores={this.state.showStores}
-            stores={preload.stores}
+            stores={this.stores}
             map={this.map}
             openStore={this.state.openStore}
             backToList={this.backToList}
           />
-          <Map stores={preload.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
+          <Map stores={this.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
         </div>
       </div>
     );
