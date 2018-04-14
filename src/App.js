@@ -113,7 +113,11 @@ class App extends Component {
     return (
       <div className="container">
         <div className="page-header">
-          <h1>{txt.title}</h1>
+          <h1>
+            {txt.title}
+            <br />
+            <small>{txt.secondaryTitle}</small>
+          </h1>
         </div>
 
         <Filters setLocation={this.setLocation} />
