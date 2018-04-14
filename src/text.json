@@ -1,9 +1,9 @@
 {
-  "title": "Store locator template",
-  "distance": "Distance from my location",
-  "show": "Show info ",
-  "hide": "Hide info ",
-  "back": "Back ",
+  "title": "Žaidimų kambariai",
+  "distance": "Rikiuoti pagal atstumą",
+  "show": "Rodyti ",
+  "hide": "Slėpti ",
+  "back": "Atgal ",
   "phone": "tel. ",
   "measurement": " km"
 }
