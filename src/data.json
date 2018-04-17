@@ -8,8 +8,8 @@
       "weblink": "https://rainbowparkas.lt/",
       "web": "rainbowparkas.lt",
       "hours": [["I-V", "12:00 — 21:00"], ["VI-VII", "10:00 — 21:00"]],
-      "lat": 54.710103,
-      "lng": 25.187354
+      "lat": 54.71011,
+      "lng": 25.18736
     },
     {
       "title": "Juokų maišėlis",
@@ -120,6 +120,17 @@
       "hours": [["I-VII", "10:00 — 21:00"]],
       "lat": 54.693861,
       "lng": 25.276177
+    },
+    {
+      "title": "Minimukų namukai",
+      "area": "Pilaitė",
+      "address": "Priegliaus g. 1",
+      "phone": "+370 626 34 848",
+      "weblink": "https://minimukunamukai.lt/",
+      "web": "minimukunamukai.lt",
+      "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
+      "lat": 54.7102,
+      "lng": 25.188
     }
   ]
 }
