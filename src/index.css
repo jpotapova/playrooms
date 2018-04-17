@@ -1,5 +1,5 @@
 h1 {
-  font-size: 2em;
+  font-size: 1.1em;
   margin-top: 0;
 }
 
@@ -15,6 +15,7 @@ h1 {
 .store-locator {
   position: relative;
   overflow-x: hidden;
+  clear: both;
 }
 
 .list-group {
@@ -58,8 +59,8 @@ h1 {
   border-top: 0;
 }
 
-.filters {
-  margin-bottom: 20px;
+.filters-container {
+  float: right;
 }
 
 .glyphicon.fast-right-spinner {
@@ -73,7 +74,7 @@ h1 {
 
 /* spinner begin */
 .spinner-container {
-  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .glyphicon.fast-right-spinner {
@@ -105,6 +106,12 @@ h1 {
 }
 
 /* spinner end */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
 
 @media (min-width: 1025px) {
   .toggle-list {

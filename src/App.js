@@ -114,9 +114,7 @@ class App extends Component {
       <div className="container">
         <div className="page-header">
           <h1>
-            {txt.title}
-            <br />
-            <small>{txt.secondaryTitle}</small>
+            {txt.title} <small>{txt.secondaryTitle}</small>
           </h1>
         </div>
 

@@ -36,12 +36,14 @@ class Filters extends Component {
   render() {
     return (
       <div className="filters">
-        <Button bsStyle="info" onClick={this.myLocation}>
-          {txt.distance}
-        </Button>
-        <span className={this.state.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
-          <span className="glyphicon glyphicon-repeat fast-right-spinner" />
-        </span>
+        <div className="filters-container">
+          <span className={this.state.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
+            <span className="glyphicon glyphicon-repeat fast-right-spinner" />
+          </span>
+          <Button bsStyle="info" onClick={this.myLocation}>
+            {txt.distance}
+          </Button>
+        </div>
       </div>
     );
   }
