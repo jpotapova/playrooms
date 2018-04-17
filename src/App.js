@@ -140,6 +140,10 @@ class App extends Component {
           />
           <Map stores={this.state.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
         </div>
+
+        <footer className="footer">
+          <p>Įrankį sukūrė Jelizaveta Potapova. Atsiliepimai/pasiūlymai el. paštu potapova.jelizaveta@gmail.com</p>
+        </footer>
       </div>
     );
   }

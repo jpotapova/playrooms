@@ -67,6 +67,10 @@ h1 {
   animation: glyphicon-spin-r 1s infinite linear;
 }
 
+.footer {
+  margin-top: 20px;
+}
+
 /* spinner begin */
 .spinner-container {
   margin-left: 20px;
