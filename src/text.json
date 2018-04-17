@@ -6,5 +6,6 @@
   "hide": "Slėpti ",
   "back": "Atgal ",
   "phone": "tel. ",
-  "measurement": " km"
+  "measurement": " km",
+  "locationError": "Nepavyko gauti buvimo vietos duomenų."
 }

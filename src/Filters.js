@@ -29,7 +29,7 @@ class Filters extends Component {
           loadingLocation: false
         });
 
-        alert('Sorry, an error occured while obtaining your location');
+        alert(txt.locationError);
       }
     );
   }
