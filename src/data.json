@@ -65,6 +65,61 @@
       "hours": [["I-V", "16:30 — 20:30"], ["VI-VII", "10:00 — 20:00"]],
       "lat": 54.726684,
       "lng": 25.232827
+    },
+    {
+      "title": "Šakar Makar",
+      "area": "Pilaitė",
+      "address": "Nidos g. 4-50",
+      "phone": "+370 605 54 056",
+      "weblink": "http://www.sakarmakar.lt/",
+      "web": "www.sakarmakar.lt",
+      "hours": [["I-VI", "10:00 — 21:00"], ["VII", "pagal susitarimą"]],
+      "lat": 54.710849,
+      "lng": 25.183397
+    },
+    {
+      "title": "Cosmos Place",
+      "area": "Žirmūnai",
+      "address": "Lakūnų g. 24",
+      "phone": "+370 616 82 888",
+      "weblink": "http://vilnius.cosmos.place/",
+      "web": "vilnius.cosmos.place",
+      "hours": [["I-VI", "15:00 — 21:00"], ["VI-VII", "11:00-20:00"]],
+      "lat": 54.714632,
+      "lng": 25.298159
+    },
+    {
+      "title": "Pramogų imperija, PC Big",
+      "area": "Fabijoniškės",
+      "address": "Ukmergės g. 369",
+      "phone": "+370 520 34 383; +370 618 44918",
+      "weblink": "http://www.pramoguimperija.lt/lt/paslaugos/vaiku-gimtadieniai-vilniuje",
+      "web": "www.pramoguimperija.lt",
+      "hours": [["I-VII", "10:00 — 21:00"]],
+      "lat": 54.740384,
+      "lng": 25.228083
+    },
+    {
+      "title": "Pramogų imperija, PLC Panorama",
+      "area": "Žvėrynas",
+      "address": "Saltoniškių g. 9",
+      "phone": "+370 611 30 088",
+      "weblink": "http://www.pramoguimperija.lt/lt/paslaugos/vaiku-gimtadieniai-zaidimu-kambarys-panorama",
+      "web": "www.pramoguimperija.lt",
+      "hours": [["I-VII", "10:00 — 21:00"]],
+      "lat": 54.699853,
+      "lng": 25.257877
+    },
+    {
+      "title": "Mažųjų Karalystė",
+      "area": "Žvėrynas",
+      "address": "Upės g. 9, 5 aukštas, VCUP",
+      "phone": "+370 620 74 094",
+      "weblink": "http://www.mazujukaralyste.lt/",
+      "web": "www.mazujukaralyste.lt",
+      "hours": [["I-VII", "10:00 — 21:00"]],
+      "lat": 54.693861,
+      "lng": 25.276177
     }
   ]
 }
