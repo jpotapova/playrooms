@@ -1,59 +1,70 @@
 {
   "stores": [
     {
-      "title": "Maxima X",
-      "area": "Vilnius",
-      "address": "Olandų g. 6",
-      "phone": "852127578",
-      "weblink": "https://www.maxima.lt/parduotuves",
-      "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
-      "lat": 54.692747,
-      "lng": 25.305324
+      "title": "Rainbow parkas",
+      "area": "Pilaitė",
+      "address": "Priegliaus g. 1, 2 aukštas",
+      "phone": "+370 615 88 063",
+      "weblink": "https://rainbowparkas.lt/",
+      "web": "rainbowparkas.lt",
+      "hours": [["I-V", "12:00 — 21:00"], ["VI-VII", "10:00 — 21:00"]],
+      "lat": 54.710103,
+      "lng": 25.187354
     },
     {
-      "title": "Maxima X",
-      "area": "Vilnius",
-      "address": "Subačiaus g. 116A",
-      "phone": "852127578",
-      "weblink": "https://www.maxima.lt/parduotuves",
-      "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
-      "lat": 54.675032,
-      "lng": 25.319212
+      "title": "Juokų maišėlis",
+      "area": "Naujamiestis",
+      "address": "Savanorių prospektas 22",
+      "phone": "+370 684 44 768",
+      "weblink": "http://www.juokumaiselis.com/",
+      "web": "www.juokumaiselis.com",
+      "hours": [["I-V", "16:00 — 21:00"]],
+      "lat": 54.677093,
+      "lng": 25.254868
     },
     {
-      "title": "Maxima XXX",
-      "area": "Vilnius",
-      "address": "Mindaugo g. 11",
-      "phone": "852127578",
-      "weblink": "https://www.maxima.lt/parduotuves",
-      "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
-      "lat": 54.678306,
-      "lng": 25.272737
+      "title": "Ledinukas",
+      "area": "Baltupiai",
+      "address": "Kalvarijų g.206, PC Čia",
+      "phone": "+370 655 12 001",
+      "weblink": "http://www.ledinukas.com/",
+      "web": "www.ledinukas.com",
+      "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "10:00 — 20:00"]],
+      "lat": 54.72347,
+      "lng": 25.280647
     },
     {
-      "title": "Maxima XX",
-      "area": "Vilnius",
-      "address": "Naugarduko g. 84",
-      "phone": "852127578",
-      "weblink": "https://www.maxima.lt/parduotuves",
-      "web": "www.maxima.lt",
-      "hours": [["I-V", "10:00 — 20:00"], ["VI", "10:00 — 16:00"], ["VII", "Closed"]],
-      "lat": 54.669672,
-      "lng": 25.258461
+      "title": "Saulutės Namai",
+      "area": "Viršuliškės",
+      "address": "Viršuliškių g.40",
+      "phone": "+370 640 56 704",
+      "weblink": "https://saulutevaikams.lt/vaiku-zaidimu-kambarys",
+      "web": "saulutevaikams.lt",
+      "hours": [["I-V", "11:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
+      "lat": 54.707842,
+      "lng": 25.228294
     },
     {
-      "title": "Maxima X",
-      "area": "Vilnius",
-      "address": "Geležinkelio g. 16",
-      "phone": "852127578",
-      "weblink": "https://www.maxima.lt/parduotuves",
-      "web": "www.maxima.lt",
-      "hours": [["I-V", "6:00 — 22:00"], ["VI-VII", "7:00 — 21:00"]],
-      "lat": 54.670409,
-      "lng": 25.284323
+      "title": "Linksmuolis",
+      "area": "Lazdynai",
+      "address": "Architektų g. 152",
+      "phone": "+370 660 06 777",
+      "weblink": "http://linksmuolis.lt/apie-mus/",
+      "web": "linksmuolis.lt",
+      "hours": [["I-VII", "10:00 — 22:00"]],
+      "lat": 54.683317,
+      "lng": 25.212928
+    },
+    {
+      "title": "Skraiduolis",
+      "area": "Pašilaičiai",
+      "address": "Žemynos g. 18, PC Galaktika",
+      "phone": "+370 695 811 00",
+      "weblink": "http://www.skraiduolis.lt/",
+      "web": "www.skraiduolis.lt",
+      "hours": [["I-V", "16:30 — 20:30"], ["VI-VII", "10:00 — 20:00"]],
+      "lat": 54.726684,
+      "lng": 25.232827
     }
   ]
 }
