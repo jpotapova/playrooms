@@ -131,6 +131,50 @@
       "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
       "lat": 54.7102,
       "lng": 25.188
+    },
+    {
+      "title": "Mumukas",
+      "area": "Perkūnkiemis",
+      "address": "Eitminų g. 12",
+      "phone": "+370 682 29 056",
+      "weblink": "https://www.mumukas.lt",
+      "web": "www.mumukas.lt",
+      "hours": [["II-V", "11:00 — 19:00"]],
+      "lat": 54.736323,
+      "lng": 25.224945
+    },
+    {
+      "title": "Safari",
+      "area": "Naujoji Vilnia",
+      "address": "Karklėnų g. 23",
+      "phone": "+370 645 26 624",
+      "weblink": "https://www.facebook.com/zaidimukambaryssafari/",
+      "web": "www.facebook.com/zaidimukambaryssafari",
+      "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "12:00 — 20:00"]],
+      "lat": 54.690045,
+      "lng": 25.426768
+    },
+    {
+      "title": "Nuotykių miestas, Akropolis",
+      "area": "Šeškinė",
+      "address": "Ozo g. 25",
+      "phone": "+370 694 10 816",
+      "weblink": "http://akropolis.lt/lt/vilnius/pramogos/nuotykiu-miestas",
+      "web": "akropolis.lt/lt/vilnius/pramogos/nuotykiu-miestas",
+      "hours": [["I-V", "10:00 — 22:00"]],
+      "lat": 54.71031,
+      "lng": 25.262675
+    },
+    {
+      "title": "Alisa",
+      "area": "Žirmūnai",
+      "address": "Lakūnų g. 24, PPC Ogmios miestas, Parkas Outlet II aukštas (įėjimas B)",
+      "phone": "+370 671 31 944",
+      "weblink": "http://www.salisalisa.lt/",
+      "web": "www.salisalisa.lt",
+      "hours": [["I-VII", "11:00 — 20:00"]],
+      "lat": 54.714,
+      "lng": 25.298
     }
   ]
 }
