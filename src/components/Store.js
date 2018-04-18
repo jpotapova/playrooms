@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'react-bootstrap';
+import { WorkingHours } from './WorkingHours';
 import txt from '../data/text';
 
 class Store extends Component {
@@ -65,22 +65,4 @@ class Store extends Component {
     );
   }
 }
-
-class WorkingHours extends Component {
-  render() {
-    return (
-      <Table condensed>
-        <tbody>
-          {this.props.hours.map((day, index) => (
-            <tr key={index}>
-              <th>{day[0]}</th>
-              <td>{day[1]}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-    );
-  }
-}
-
 export { Store };
