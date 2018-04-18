@@ -1,9 +1,8 @@
 {
-  "title": "Žaidimų kambariai",
-  "secondaryTitle": "kasdienėms pramogoms",
+  "title": "Žaidimų kambariai kasdienėms pramogoms",
   "distance": "Rikiuoti pagal atstumą",
-  "show": "Rodyti ",
-  "hide": "Slėpti ",
+  "show": "Sąrašas ",
+  "hide": "Žemėlapis ",
   "back": "Atgal ",
   "phone": "tel. ",
   "measurement": " km",
