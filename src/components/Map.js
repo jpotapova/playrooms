@@ -6,6 +6,8 @@ class Map extends Component {
     this.generateMarker = this.generateMarker.bind(this);
     this.addMarker = this.addMarker.bind(this);
     this.moveMap = this.moveMap.bind(this);
+    this.initMap = this.initMap.bind(this);
+    this.initMarkers = this.initMarkers.bind(this);
 
     this.map = undefined;
     this.markers = [];
@@ -18,7 +20,6 @@ class Map extends Component {
       icon: './icon-store-black.svg'
     });
     marker.addListener('click', () => {
-      map.panTo(position);
       this.props.showStore(index);
     });
     return marker;
@@ -29,19 +30,23 @@ class Map extends Component {
     bounds.extend(position);
     return [markers, bounds];
   }
-  componentDidMount() {
-    // init map and bounds
+  initMap() {
     this.map = new window.google.maps.Map(this.refs.map, {
       center: { lat: 54.679408, lng: 25.284144 },
       zoom: 16
     });
     this.bounds = new window.google.maps.LatLngBounds();
-
+  }
+  initMarkers() {
     // display markers and fit map to show all of them
     this.props.stores.forEach((store, index) => {
       [this.markers, this.bounds] = this.addMarker(this.markers, this.bounds, store, index);
     });
     this.moveMap(this.map, this.bounds);
+  }
+  componentDidMount() {
+    this.initMap();
+    this.initMarkers();
   }
   componentDidUpdate(prevProps) {
     if (prevProps.openStore !== this.props.openStore) {

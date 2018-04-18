@@ -44,7 +44,7 @@ class Store extends Component {
           hours={this.store.hours}
           openStore={this.props.openStore}
           id={this.props.id}
-          backToList={this.props.backToList}
+          showStore={this.props.showStore}
         />
       </div>
     );

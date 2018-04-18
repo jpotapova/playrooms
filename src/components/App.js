@@ -16,7 +16,6 @@ class App extends Component {
     this.toggleStores = this.toggleStores.bind(this);
 
     this.showStore = this.showStore.bind(this);
-    this.backToList = this.backToList.bind(this);
     this.updateStores = this.updateStores.bind(this);
 
     this.state = {
@@ -34,14 +33,9 @@ class App extends Component {
     });
   }
 
-  showStore(id) {
+  showStore(id = -1) {
     // view only single store
     this.setState({ openStore: id });
-  }
-
-  backToList() {
-    // view full store list
-    this.setState({ openStore: -1 });
   }
 
   componentDidMount() {
@@ -78,7 +72,6 @@ class App extends Component {
             showStores={this.state.showStores}
             stores={this.state.stores}
             openStore={this.state.openStore}
-            backToList={this.backToList}
           />
           <Map stores={this.state.stores} showStore={this.showStore} openStore={this.state.openStore} />
         </div>

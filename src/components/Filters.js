@@ -13,10 +13,10 @@ class Filters extends Component {
     };
   }
   saveDistances(stores, position) {
-    console.log('save dist', position);
     // update all stores with distance from current location
     var updatedStores = stores.map(store => {
       var d = getDistanceFromLatLonInKm(position.coords.lat, position.coords.lng, store.lat, store.lng);
+      console.log(d);
       store['distance'] = d.toFixed(1);
       return store;
     });

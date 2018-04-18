@@ -21,7 +21,6 @@ class StoreList extends React.Component {
             id={index}
             showStore={this.props.showStore}
             openStore={this.props.openStore}
-            backToList={this.props.backToList}
           />
         ))}
       </div>
