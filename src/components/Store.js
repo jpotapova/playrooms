@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { WorkingHours } from './WorkingHours';
+import { Distance } from './Distance';
 import txt from '../data/text';
 
 class Store extends Component {
@@ -32,10 +33,7 @@ class Store extends Component {
   render() {
     return (
       <div className={this.getClass(this.props.id, this.props.openStore)}>
-        <span className={this.props.distance ? 'badge' : 'hidden'}>
-          {this.props.distance}
-          {txt.measurement}
-        </span>
+        <Distance distance={this.props.distance} />
         <div className="main-details" onClick={this.showStore}>
           <h4 className="list-group-item-heading">{this.props.title}</h4>
           <p className="list-group-item-text">
