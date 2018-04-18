@@ -14,7 +14,6 @@ class App extends Component {
     super(props);
 
     this.toggleStores = this.toggleStores.bind(this);
-    this.layout = this.layout.bind(this);
     this.initMap = this.initMap.bind(this);
     this.showStore = this.showStore.bind(this);
     this.backToList = this.backToList.bind(this);
@@ -58,10 +57,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.layout();
-  }
-
-  layout() {
     // detect large screen
     const mq = window.matchMedia('(min-width: 1025px)');
     this.setState({ desktop: mq.matches });
