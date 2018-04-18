@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import txt from './text';
+import txt from '../data/text';
 
 class ToggleButton extends React.Component {
   constructor(props) {

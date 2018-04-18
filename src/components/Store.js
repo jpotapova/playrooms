@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
-import txt from './text';
+import txt from '../data/text';
 
 class Store extends Component {
   constructor(props) {

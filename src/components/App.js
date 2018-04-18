@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import preload from './data';
-import txt from './text';
+import preload from '../data/stores';
+import txt from '../data/text';
 
 import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Filters } from './Filters';
-import { getDistanceFromLatLonInKm } from './distanceCalc';
+import { getDistanceFromLatLonInKm } from '../helpers/distanceCalc';
 
 class App extends Component {
   constructor(props) {
