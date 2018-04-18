@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import preload from './data';
 import txt from './text';
 
