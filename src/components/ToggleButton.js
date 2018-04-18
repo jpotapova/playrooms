@@ -3,18 +3,12 @@ import { Button } from 'react-bootstrap';
 import txt from '../data/text';
 
 class ToggleButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.toggleStores = this.toggleStores.bind(this);
-  }
-
-  toggleStores(e) {
-    this.props.toggleStores();
-  }
-
   render() {
-    const button = this.props.desktop ? null : (
-      <Button bsStyle="info" onClick={this.toggleStores}>
+    if (this.props.desktop) {
+      return null;
+    }
+    return (
+      <Button bsStyle="info" onClick={this.props.toggleStores}>
         <span className={this.props.showStores ? undefined : 'hidden'}>
           {txt.hide}
           <span className="glyphicon glyphicon-menu-left" />
@@ -25,7 +19,6 @@ class ToggleButton extends React.Component {
         </span>
       </Button>
     );
-    return button;
   }
 }
 
