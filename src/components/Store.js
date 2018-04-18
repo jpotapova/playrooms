@@ -6,7 +6,6 @@ import txt from '../data/text';
 class Store extends Component {
   constructor(props) {
     super(props);
-    this.backToList = this.backToList.bind(this);
     this.showStore = this.showStore.bind(this);
     this.getClass = this.getClass.bind(this);
   }
@@ -21,9 +20,6 @@ class Store extends Component {
       }
     }
     return result;
-  }
-  backToList() {
-    this.props.backToList();
   }
   showStore() {
     // select single store
@@ -53,7 +49,7 @@ class Store extends Component {
           <WorkingHours hours={this.props.hours} />
           <p className="text-right">
             &nbsp;
-            <button className="btn btn-info" type="button" onClick={this.backToList}>
+            <button className="btn btn-info" type="button" onClick={this.props.backToList}>
               {txt.back}
               <span className="glyphicon glyphicon-list" />
             </button>
