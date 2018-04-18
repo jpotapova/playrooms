@@ -14,11 +14,10 @@ class App extends Component {
     super(props);
 
     this.toggleStores = this.toggleStores.bind(this);
-    this.initMap = this.initMap.bind(this);
+
     this.showStore = this.showStore.bind(this);
     this.backToList = this.backToList.bind(this);
     this.updateStores = this.updateStores.bind(this);
-    this.map = undefined;
 
     this.state = {
       desktop: true,
@@ -43,11 +42,6 @@ class App extends Component {
   backToList() {
     // view full store list
     this.setState({ openStore: -1 });
-  }
-
-  initMap(map) {
-    // save refs to initialised map
-    this.map = map;
   }
 
   componentDidMount() {
@@ -83,17 +77,10 @@ class App extends Component {
             showStore={this.showStore}
             showStores={this.state.showStores}
             stores={this.state.stores}
-            map={this.map}
             openStore={this.state.openStore}
             backToList={this.backToList}
           />
-          <Map
-            stores={this.state.stores}
-            map={this.map}
-            initMap={this.initMap}
-            showStore={this.showStore}
-            openStore={this.state.openStore}
-          />
+          <Map stores={this.state.stores} showStore={this.showStore} openStore={this.state.openStore} />
         </div>
 
         <Footer />

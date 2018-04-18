@@ -18,7 +18,6 @@ class StoreList extends React.Component {
           <Store
             store={store}
             key={index}
-            map={this.props.map}
             id={index}
             showStore={this.props.showStore}
             openStore={this.props.openStore}

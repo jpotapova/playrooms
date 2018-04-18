@@ -26,7 +26,6 @@ class Store extends Component {
   showStore() {
     // select single store
     this.props.showStore(this.props.id);
-    this.props.map.panTo({ lat: this.store.lat, lng: this.store.lng });
   }
   render() {
     return (
