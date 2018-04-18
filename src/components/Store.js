@@ -9,11 +9,11 @@ class Store extends Component {
     this.showStore = this.showStore.bind(this);
     this.getClass = this.getClass.bind(this);
   }
-  getClass() {
-    // animate element entrance when single store is seleted
+  getClass(id, openStoreId) {
+    // animate element entrance when single store is selected
     var result = 'list-group-item';
-    if (this.props.openStore > -1) {
-      if (this.props.id === this.props.openStore) {
+    if (openStoreId > -1) {
+      if (id === openStoreId) {
         result = result + ' animated fadeIn';
       } else {
         result = result + ' hidden';
@@ -31,7 +31,7 @@ class Store extends Component {
   }
   render() {
     return (
-      <div className={this.getClass()}>
+      <div className={this.getClass(this.props.id, this.props.openStore)}>
         <span className={this.props.distance ? 'badge' : 'hidden'}>
           {this.props.distance}
           {txt.measurement}
