@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { WorkingHours } from './WorkingHours';
 import { Distance } from './Distance';
-import txt from '../data/text';
+import { MoreDetails } from './MoreDetails';
+import { MainDetails } from './MainDetails';
 
 class Store extends Component {
   constructor(props) {
@@ -30,31 +30,21 @@ class Store extends Component {
     return (
       <div className={this.getClass(this.props.id, this.props.openStore)}>
         <Distance distance={this.props.distance} />
-        <div className="main-details" onClick={this.showStore}>
-          <h4 className="list-group-item-heading">{this.props.title}</h4>
-          <p className="list-group-item-text">
-            {this.props.area}, {this.props.address}
-          </p>
-          <p className="list-group-item-text">
-            <a href={this.props.weblink} target="_blank">
-              {this.props.web}
-            </a>
-          </p>
-          <p className="list-group-item-text">
-            {txt.phone}
-            {this.props.phone}
-          </p>
-        </div>
-        <div className={this.props.openStore === this.props.id ? 'more-details' : 'more-details hidden'}>
-          <WorkingHours hours={this.props.hours} />
-          <p className="text-right">
-            &nbsp;
-            <button className="btn btn-info" type="button" onClick={this.props.backToList}>
-              {txt.back}
-              <span className="glyphicon glyphicon-list" />
-            </button>
-          </p>
-        </div>
+        <MainDetails
+          showStore={this.showStore}
+          title={this.props.title}
+          area={this.props.area}
+          address={this.props.address}
+          web={this.props.web}
+          weblink={this.props.weblink}
+          phone={this.props.phone}
+        />
+        <MoreDetails
+          hours={this.props.hours}
+          openStore={this.props.openStore}
+          id={this.props.id}
+          backToList={this.props.backToList}
+        />
       </div>
     );
   }
