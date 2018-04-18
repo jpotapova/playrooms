@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import preload from '../data/stores';
-import txt from '../data/text';
+import storeList from '../data/stores';
 
+import { Header } from './Header.js';
+import { Footer } from './Footer.js';
 import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
@@ -27,7 +28,7 @@ class App extends Component {
       desktop: true,
       showStores: true,
       openStore: -1,
-      stores: this.orderStores(preload.stores, 'title')
+      stores: this.orderStores(storeList.stores, 'title')
     };
   }
 
@@ -111,10 +112,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="page-header">
-          <h1>{txt.title}</h1>
-        </div>
-
+        <Header />
         <Filters setLocation={this.setLocation} />
 
         <ToggleButton
@@ -136,9 +134,7 @@ class App extends Component {
           <Map stores={this.state.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
         </div>
 
-        <footer className="footer">
-          <p>Įrankį sukūrė Jelizaveta Potapova. Atsiliepimai/pasiūlymai el. paštu potapova.jelizaveta@gmail.com</p>
-        </footer>
+        <Footer />
       </div>
     );
   }
