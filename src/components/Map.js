@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Map extends Component {
   constructor(props) {
     super(props);
+    this.generateMarker = this.generateMarker.bind(this);
     this.addMarker = this.addMarker.bind(this);
     this.moveMap = this.moveMap.bind(this);
 
@@ -10,7 +11,7 @@ class Map extends Component {
     this.markers = [];
     this.bounds = undefined;
   }
-  addMarker(map, index, position) {
+  generateMarker(map, index, position) {
     var marker = new window.google.maps.Marker({
       position: position,
       map: map,
@@ -22,6 +23,12 @@ class Map extends Component {
     });
     return marker;
   }
+  addMarker(markers, bounds, store, index) {
+    var position = { lat: store.lat, lng: store.lng };
+    markers.push(this.generateMarker(this.map, index, position));
+    bounds.extend(position);
+    return [markers, bounds];
+  }
   componentDidMount() {
     // init map and bounds
     this.map = new window.google.maps.Map(this.refs.map, {
@@ -31,11 +38,8 @@ class Map extends Component {
     this.bounds = new window.google.maps.LatLngBounds();
 
     // display markers and fit map to show all of them
-    var position;
     this.props.stores.forEach((store, index) => {
-      position = { lat: store.lat, lng: store.lng };
-      this.markers.push(this.addMarker(this.map, index, position));
-      this.bounds.extend(position);
+      [this.markers, this.bounds] = this.addMarker(this.markers, this.bounds, store, index);
     });
     this.moveMap(this.map, this.bounds);
   }
