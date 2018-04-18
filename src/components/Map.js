@@ -69,9 +69,11 @@ class Map extends Component {
   }
   moveMap(map, bounds, index = -1, stores = []) {
     if (index === -1) {
+      map.setZoom(16);
       map.fitBounds(bounds);
     } else {
       map.panTo({ lat: stores[index].lat, lng: stores[index].lng });
+      map.setZoom(17);
     }
   }
   render() {
