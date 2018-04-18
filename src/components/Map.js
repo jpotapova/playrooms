@@ -4,6 +4,8 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.addMarker = this.addMarker.bind(this);
+
+    this.markers = [];
   }
   addMarker(map, index, position) {
     var marker = new window.google.maps.Marker({
@@ -18,8 +20,6 @@ class Map extends Component {
     return marker;
   }
   componentDidMount() {
-    var markers = [];
-
     // init map and bounds
     const map = new window.google.maps.Map(this.refs.map, {
       center: { lat: 54.679408, lng: 25.284144 },
@@ -31,11 +31,27 @@ class Map extends Component {
     var position;
     this.props.stores.forEach((store, index) => {
       position = { lat: store.lat, lng: store.lng };
-      markers.push(this.addMarker(map, index, position));
+      this.markers.push(this.addMarker(map, index, position));
       bounds.extend(position);
     });
     map.fitBounds(bounds);
-    this.props.initMap(map, markers);
+    this.props.initMap(map);
+  }
+  componentDidUpdate() {
+    this.markers = this.colorMarkers(this.markers, this.props.openStore);
+  }
+  colorMarkers(markers, index) {
+    // go through markers and assign appropriate colour
+    markers.forEach((marker, markerIndex) => {
+      if (index === markerIndex) {
+        // active marker is red
+        marker.setIcon('./icon-store-red.svg');
+      } else {
+        // regular marker is black
+        marker.setIcon('./icon-store-black.svg');
+      }
+    });
+    return markers;
   }
   render() {
     return <div ref="map" className="map" />;

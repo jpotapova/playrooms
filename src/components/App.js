@@ -7,7 +7,7 @@ import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Filters } from './Filters';
-import { getDistanceFromLatLonInKm } from '../helpers/distanceCalc';
+import { orderStores } from '../helpers';
 
 class App extends Component {
   constructor(props) {
@@ -17,17 +17,14 @@ class App extends Component {
     this.initMap = this.initMap.bind(this);
     this.showStore = this.showStore.bind(this);
     this.backToList = this.backToList.bind(this);
-    this.colorMarkers = this.colorMarkers.bind(this);
-    this.orderStores = this.orderStores.bind(this);
-    this.setLocation = this.setLocation.bind(this);
+    this.updateStores = this.updateStores.bind(this);
     this.map = undefined;
-    this.markers = [];
 
     this.state = {
       desktop: true,
       showStores: true,
       openStore: -1,
-      stores: this.orderStores(storeList.stores, 'title')
+      stores: orderStores(storeList.stores, 'title')
     };
   }
 
@@ -41,19 +38,16 @@ class App extends Component {
   showStore(id) {
     // view only single store
     this.setState({ openStore: id });
-    this.colorMarkers(id);
   }
 
   backToList() {
     // view full store list
     this.setState({ openStore: -1 });
-    this.colorMarkers(-1);
   }
 
-  initMap(map, markers) {
-    // save refs to initialised map and markers
+  initMap(map) {
+    // save refs to initialised map
     this.map = map;
-    this.markers = markers;
   }
 
   componentDidMount() {
@@ -65,40 +59,7 @@ class App extends Component {
     });
   }
 
-  colorMarkers(index) {
-    // go through markers and assign appropriate colour
-    this.markers.forEach((marker, markerIndex) => {
-      if (index === markerIndex) {
-        // active marker is red
-        marker.setIcon('./icon-store-red.svg');
-      } else {
-        // regular marker is black
-        marker.setIcon('./icon-store-black.svg');
-      }
-    });
-  }
-
-  orderStores(stores, sortBy) {
-    return stores.sort((store1, store2) => {
-      if (store1[sortBy] < store2[sortBy]) {
-        return -1;
-      }
-      if (store1[sortBy] > store2[sortBy]) {
-        return 1;
-      }
-      return 0;
-    });
-  }
-
-  setLocation(lat, lng) {
-    // update all stores with distance from current location
-    var stores = this.state.stores.map(store => {
-      var d = getDistanceFromLatLonInKm(lat, lng, store.lat, store.lng);
-      store['distance'] = d.toFixed(1);
-      return store;
-    });
-    // order by distance from my location
-    stores = this.orderStores(stores, 'distance');
+  updateStores(stores) {
     this.setState({
       stores: stores
     });
@@ -108,7 +69,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <Filters setLocation={this.setLocation} />
+        <Filters updateStores={this.updateStores} stores={this.state.stores} />
 
         <ToggleButton
           showStores={this.state.showStores}
@@ -126,7 +87,13 @@ class App extends Component {
             openStore={this.state.openStore}
             backToList={this.backToList}
           />
-          <Map stores={this.state.stores} map={this.map} initMap={this.initMap} showStore={this.showStore} />
+          <Map
+            stores={this.state.stores}
+            map={this.map}
+            initMap={this.initMap}
+            showStore={this.showStore}
+            openStore={this.state.openStore}
+          />
         </div>
 
         <Footer />

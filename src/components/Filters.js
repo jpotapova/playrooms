@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import txt from '../data/text';
+import { getDistanceFromLatLonInKm, orderStores } from '../helpers';
 
 class Filters extends Component {
   constructor(props) {
     super(props);
     this.myLocation = this.myLocation.bind(this);
+    this.saveDistances = this.saveDistances.bind(this);
     this.state = {
       loadingLocation: false
     };
+  }
+  saveDistances(stores, position) {
+    console.log('save dist', position);
+    // update all stores with distance from current location
+    var updatedStores = stores.map(store => {
+      var d = getDistanceFromLatLonInKm(position.coords.lat, position.coords.lng, store.lat, store.lng);
+      store['distance'] = d.toFixed(1);
+      return store;
+    });
+    // order by distance from my location
+    return orderStores(updatedStores, 'distance');
   }
   myLocation() {
     this.setState({
@@ -21,7 +34,8 @@ class Filters extends Component {
         this.setState({
           loadingLocation: false
         });
-        this.props.setLocation(position.coords.latitude, position.coords.longitude);
+        let stores = this.saveDistances(this.props.stores, position);
+        this.props.updateStores(stores);
       },
       error => {
         // error obtaining location
@@ -30,6 +44,9 @@ class Filters extends Component {
         });
 
         alert(txt.locationError);
+      },
+      {
+        maximumAge: Infinity
       }
     );
   }

@@ -14,4 +14,16 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   return d;
 }
 
-export { getDistanceFromLatLonInKm };
+function orderStores(stores, sortBy) {
+  return stores.sort((store1, store2) => {
+    if (store1[sortBy] < store2[sortBy]) {
+      return -1;
+    }
+    if (store1[sortBy] > store2[sortBy]) {
+      return 1;
+    }
+    return 0;
+  });
+}
+
+export { getDistanceFromLatLonInKm, orderStores };
