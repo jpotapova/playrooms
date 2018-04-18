@@ -8,6 +8,8 @@ class Store extends Component {
     super(props);
     this.showStore = this.showStore.bind(this);
     this.getClass = this.getClass.bind(this);
+
+    this.store = this.props.store;
   }
   getClass(id, openStoreId) {
     // animate element entrance when single store is selected
@@ -24,23 +26,23 @@ class Store extends Component {
   showStore() {
     // select single store
     this.props.showStore(this.props.id);
-    this.props.map.panTo({ lat: this.props.lat, lng: this.props.lng });
+    this.props.map.panTo({ lat: this.store.lat, lng: this.store.lng });
   }
   render() {
     return (
       <div className={this.getClass(this.props.id, this.props.openStore)}>
-        <Distance distance={this.props.distance} />
+        <Distance distance={this.store.distance} />
         <MainDetails
           showStore={this.showStore}
-          title={this.props.title}
-          area={this.props.area}
-          address={this.props.address}
-          web={this.props.web}
-          weblink={this.props.weblink}
-          phone={this.props.phone}
+          title={this.store.title}
+          area={this.store.area}
+          address={this.store.address}
+          web={this.store.web}
+          weblink={this.store.weblink}
+          phone={this.store.phone}
         />
         <MoreDetails
-          hours={this.props.hours}
+          hours={this.store.hours}
           openStore={this.props.openStore}
           id={this.props.id}
           backToList={this.props.backToList}
