@@ -15,8 +15,7 @@ class Filters extends Component {
   saveDistances(stores, position) {
     // update all stores with distance from current location
     var updatedStores = stores.map(store => {
-      var d = getDistanceFromLatLonInKm(position.coords.lat, position.coords.lng, store.lat, store.lng);
-      console.log(d);
+      var d = getDistanceFromLatLonInKm(position.latitude, position.longitude, store.lat, store.lng);
       store['distance'] = d.toFixed(1);
       return store;
     });
@@ -34,7 +33,7 @@ class Filters extends Component {
         this.setState({
           loadingLocation: false
         });
-        let stores = this.saveDistances(this.props.stores, position);
+        let stores = this.saveDistances(this.props.stores, position.coords);
         this.props.updateStores(stores);
       },
       error => {
