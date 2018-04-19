@@ -59,6 +59,10 @@ h1 {
   border-top: 0;
 }
 
+.list-group-item-text {
+  overflow-x: hidden;
+}
+
 .filters-container {
   float: right;
 }
