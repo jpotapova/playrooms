@@ -16,7 +16,7 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
 
 function orderStores(stores, sortBy) {
   return stores.sort((store1, store2) => {
-    if ('sortBy' === 'distance') {
+    if (sortBy === 'distance') {
       store1[sortBy] = parseFloat(store1[sortBy]);
       store2[sortBy] = parseFloat(store2[sortBy]);
     }
