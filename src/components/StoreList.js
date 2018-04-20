@@ -17,8 +17,8 @@ class StoreList extends React.Component {
         {this.props.stores.map((store, index) => (
           <Store
             store={store}
-            key={index}
             id={index}
+            key={store.title}
             showStore={this.props.showStore}
             openStore={this.props.openStore}
           />
