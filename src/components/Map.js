@@ -33,7 +33,9 @@ class Map extends Component {
   initMap() {
     this.map = new window.google.maps.Map(this.refs.map, {
       center: { lat: 54.679408, lng: 25.284144 },
-      zoom: 16
+      zoom: 16,
+      mapTypeControl: false,
+      streetViewControl: false
     });
     this.bounds = new window.google.maps.LatLngBounds();
   }
