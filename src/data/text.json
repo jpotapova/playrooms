@@ -6,5 +6,6 @@
   "back": "Atgal ",
   "phone": "tel. ",
   "measurement": " km",
-  "locationError": "Nepavyko gauti buvimo vietos duomenų."
+  "locationError": "Nepavyko gauti buvimo vietos duomenų.",
+  "price": "€/h"
 }

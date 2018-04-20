@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Distance } from './Distance';
+import { Price } from './Price';
 import { MoreDetails } from './MoreDetails';
 import { MainDetails } from './MainDetails';
 
@@ -31,6 +32,7 @@ class Store extends Component {
     return (
       <div className={this.getClass(this.props.id, this.props.openStore)}>
         <Distance distance={this.store.distance} />
+        <Price price={this.store.price} />
         <MainDetails
           showStore={this.showStore}
           title={this.store.title}

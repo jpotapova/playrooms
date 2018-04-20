@@ -174,7 +174,13 @@
       "web": "www.salisalisa.lt",
       "hours": [["I-VII", "11:00 — 20:00"]],
       "lat": 54.714,
-      "lng": 25.298
+      "lng": 25.298,
+      "price": {
+        "h": 4,
+        "day": 6,
+        "care": 7,
+        "subscription": 30
+      }
     }
   ]
 }
