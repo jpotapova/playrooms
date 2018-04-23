@@ -56,9 +56,29 @@ class Filters extends Component {
           <span className={this.state.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
             <span className="glyphicon glyphicon-repeat fast-right-spinner" />
           </span>
-          <Button bsStyle="info" onClick={this.myLocation}>
-            {txt.distance}
-          </Button>
+          <div className="btn-group">
+            <button
+              type="button"
+              className="btn btn-info dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span className="glyphicon glyphicon-sort-by-attributes" aria-hidden="true" /> Pavadinimas{' '}
+              <span className="caret" />
+            </button>
+            <ul className="dropdown-menu">
+              <li>
+                <a href="#">Pavadinimas</a>
+              </li>
+              <li>
+                <a href="#">Kaina</a>
+              </li>
+              <li>
+                <a href="#">Atstumas</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );
