@@ -16,7 +16,7 @@ h1 {
 }
 
 .map {
-  height: 400px;
+  height: 350px;
   clear: both;
 }
 
@@ -27,7 +27,7 @@ h1 {
 }
 
 .list-group {
-  height: 400px;
+  height: 350px;
   background: white;
   opacity: 0.9;
   width: 290px;
