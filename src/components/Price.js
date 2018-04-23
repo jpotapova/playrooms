@@ -3,13 +3,12 @@ import txt from '../data/text';
 
 class Price extends Component {
   render() {
-    var priceBadge = this.props.price ? (
+    return (
       <span className="badge badge-warning">
-        {this.props.price.h}
+        {this.props.price.h || '?'}
         {txt.price}
       </span>
-    ) : null;
-    return priceBadge;
+    );
   }
 }
 
