@@ -9,7 +9,10 @@
       "web": "rainbowparkas.lt",
       "hours": [["I-V", "12:00 — 21:00"], ["VI-VII", "10:00 — 21:00"]],
       "lat": 54.71011,
-      "lng": 25.18736
+      "lng": 25.18736,
+      "price": {
+        "h": 0
+      }
     },
     {
       "title": "Juokų maišėlis",
@@ -20,7 +23,10 @@
       "web": "www.juokumaiselis.com",
       "hours": [["I-V", "16:00 — 21:00"]],
       "lat": 54.677093,
-      "lng": 25.254868
+      "lng": 25.254868,
+      "price": {
+        "h": 5
+      }
     },
     {
       "title": "Ledinukas",
@@ -31,7 +37,10 @@
       "web": "www.ledinukas.com",
       "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "10:00 — 20:00"]],
       "lat": 54.72347,
-      "lng": 25.280647
+      "lng": 25.280647,
+      "price": {
+        "h": 5
+      }
     },
     {
       "title": "Saulutės Namai",
@@ -42,7 +51,10 @@
       "web": "saulutevaikams.lt",
       "hours": [["I-V", "11:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
       "lat": 54.707842,
-      "lng": 25.228294
+      "lng": 25.228294,
+      "price": {
+        "h": 4
+      }
     },
     {
       "title": "Linksmuolis",
@@ -53,7 +65,10 @@
       "web": "linksmuolis.lt",
       "hours": [["I-VII", "10:00 — 22:00"]],
       "lat": 54.683317,
-      "lng": 25.212928
+      "lng": 25.212928,
+      "price": {
+        "h": 4
+      }
     },
     {
       "title": "Skraiduolis",
@@ -64,7 +79,10 @@
       "web": "www.skraiduolis.lt",
       "hours": [["I-V", "16:30 — 20:30"], ["VI-VII", "10:00 — 20:00"]],
       "lat": 54.726684,
-      "lng": 25.232827
+      "lng": 25.232827,
+      "price": {
+        "h": 3
+      }
     },
     {
       "title": "Šakar Makar",
@@ -75,7 +93,10 @@
       "web": "www.sakarmakar.lt",
       "hours": [["I-VI", "10:00 — 21:00"], ["VII", "pagal susitarimą"]],
       "lat": 54.710849,
-      "lng": 25.183397
+      "lng": 25.183397,
+      "price": {
+        "h": 2.5
+      }
     },
     {
       "title": "Cosmos Place",
@@ -86,7 +107,11 @@
       "web": "vilnius.cosmos.place",
       "hours": [["I-VI", "15:00 — 21:00"], ["VI-VII", "11:00-20:00"]],
       "lat": 54.714632,
-      "lng": 25.298159
+      "lng": 25.298159,
+      "price": {
+        "h": 6,
+        "prefix": "nuo "
+      }
     },
     {
       "title": "Pramogų imperija, PC Big",
@@ -97,7 +122,10 @@
       "web": "www.pramoguimperija.lt",
       "hours": [["I-VII", "10:00 — 21:00"]],
       "lat": 54.740384,
-      "lng": 25.228083
+      "lng": 25.228083,
+      "price": {
+        "h": 5
+      }
     },
     {
       "title": "Pramogų imperija, PLC Panorama",
@@ -108,7 +136,10 @@
       "web": "www.pramoguimperija.lt",
       "hours": [["I-VII", "10:00 — 21:00"]],
       "lat": 54.699853,
-      "lng": 25.257877
+      "lng": 25.257877,
+      "price": {
+        "h": 5
+      }
     },
     {
       "title": "Mažųjų Karalystė",
@@ -119,7 +150,10 @@
       "web": "www.mazujukaralyste.lt",
       "hours": [["I-VII", "10:00 — 21:00"]],
       "lat": 54.693861,
-      "lng": 25.276177
+      "lng": 25.276177,
+      "price": {
+        "h": 4
+      }
     },
     {
       "title": "Minimukų namukai",
@@ -130,7 +164,10 @@
       "web": "minimukunamukai.lt",
       "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
       "lat": 54.7102,
-      "lng": 25.188
+      "lng": 25.188,
+      "price": {
+        "h": 3.5
+      }
     },
     {
       "title": "Mumukas",
@@ -141,7 +178,10 @@
       "web": "www.mumukas.lt",
       "hours": [["II-V", "11:00 — 19:00"]],
       "lat": 54.736323,
-      "lng": 25.224945
+      "lng": 25.224945,
+      "price": {
+        "h": 3
+      }
     },
     {
       "title": "Safari",
@@ -152,7 +192,10 @@
       "web": "www.facebook.com/zaidimukambaryssafari",
       "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "12:00 — 20:00"]],
       "lat": 54.690045,
-      "lng": 25.426768
+      "lng": 25.426768,
+      "price": {
+        "h": 2.5
+      }
     },
     {
       "title": "Nuotykių miestas, Akropolis",
@@ -163,7 +206,10 @@
       "web": "akropolis.lt/lt/vilnius/pramogos/nuotykiu-miestas",
       "hours": [["I-V", "10:00 — 22:00"]],
       "lat": 54.71031,
-      "lng": 25.262675
+      "lng": 25.262675,
+      "price": {
+        "h": 0
+      }
     },
     {
       "title": "Alisa",
