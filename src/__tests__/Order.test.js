@@ -21,3 +21,9 @@ test('Order by renders with loader icon ', () => {
   let tree = c.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('Store', () => {
+  const c = new Order({ orderBy: 'title' });
+  expect(c.getClass('title')).toBe('disabled');
+  expect(c.getClass('distance')).toBeNull();
+});

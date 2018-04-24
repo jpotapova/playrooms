@@ -26,6 +26,13 @@ class Order extends Component {
       orderDropdownOpen: false
     });
   }
+  getClass(element) {
+    if (element === this.props.orderBy) {
+      return 'disabled';
+    } else {
+      return null;
+    }
+  }
   render() {
     return (
       <div className="filters">
@@ -39,17 +46,17 @@ class Order extends Component {
               &nbsp;{txt[this.props.orderBy]}&nbsp;<span className="caret" />
             </button>
             <ul className="dropdown-menu">
-              <li>
+              <li className={this.getClass('title')}>
                 <a href={null} onClick={() => this.selectOrder('title')}>
                   {txt.title}
                 </a>
               </li>
-              <li>
+              <li className={this.getClass('price')}>
                 <a href={null} onClick={() => this.selectOrder('price')}>
                   {txt.price}
                 </a>
               </li>
-              <li>
+              <li className={this.getClass('distance')}>
                 <a href={null} onClick={() => this.selectOrder('distance')}>
                   {txt.distance}
                 </a>

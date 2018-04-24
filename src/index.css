@@ -13,6 +13,10 @@ h1 {
   left: auto;
 }
 
+.dropdown-menu .disabled {
+  background: #ccc;
+}
+
 .page-header {
   border-bottom: 0;
   padding-bottom: 0;
