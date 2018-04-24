@@ -7,13 +7,15 @@ import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Order } from './Order';
+import { saveDistances, samePosition } from '../helpers';
+import txt from '../data/text';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.toggleStores = this.toggleStores.bind(this);
-
+    this.myLocation = this.myLocation.bind(this);
     this.showStore = this.showStore.bind(this);
     this.updateStores = this.updateStores.bind(this);
     this.updateOrderBy = this.updateOrderBy.bind(this);
@@ -23,7 +25,12 @@ class App extends Component {
       desktop: true,
       showStores: true,
       openStore: -1,
-      stores: storeList.stores
+      stores: storeList.stores,
+      position: {
+        latitude: undefined,
+        longitude: undefined
+      },
+      loadingLocation: false
     };
   }
 
@@ -60,11 +67,51 @@ class App extends Component {
     });
   }
 
+  myLocation() {
+    this.setState({
+      loadingLocation: true
+    });
+
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        // success obtaining location
+        this.setState({
+          loadingLocation: false
+        });
+
+        if (!samePosition(this.state.position, position.coords)) {
+          let stores = saveDistances(this.state.stores, position.coords);
+          this.setState({
+            position: position.coords,
+            orderBy: 'distance',
+            stores: stores
+          });
+        }
+      },
+      error => {
+        // error obtaining location
+        this.setState({
+          loadingLocation: false
+        });
+
+        alert(txt.locationError);
+      },
+      {
+        maximumAge: Infinity
+      }
+    );
+  }
+
   render() {
     return (
       <div className="container">
         <Header />
-        <Order stores={this.state.stores} orderBy={this.state.orderBy} updateOrderBy={this.updateOrderBy} />
+        <Order
+          orderBy={this.state.orderBy}
+          updateOrderBy={this.updateOrderBy}
+          loadingLocation={this.state.loadingLocation}
+          myLocation={this.myLocation}
+        />
 
         <ToggleButton
           showStores={this.state.showStores}

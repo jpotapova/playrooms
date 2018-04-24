@@ -34,4 +34,19 @@ function orderStores(stores, sortBy) {
   });
 }
 
-export { getDistanceFromLatLonInKm, orderStores };
+function saveDistances(stores, position) {
+  // update all stores with distance from current location
+  var updatedStores = stores.map(store => {
+    var d = getDistanceFromLatLonInKm(position.latitude, position.longitude, store.lat, store.lng);
+    store['distance'] = parseFloat(d.toFixed(1));
+    return store;
+  });
+  // order by distance from my location
+  return updatedStores;
+}
+
+function samePosition(pos1, pos2) {
+  return pos1.latitude === pos2.latitude && pos1.longitude === pos2.longitude;
+}
+
+export { getDistanceFromLatLonInKm, orderStores, saveDistances, samePosition };
