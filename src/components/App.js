@@ -36,6 +36,7 @@ class App extends Component {
 
   toggleStores() {
     // show/hide list of stores
+    console.log('toggle');
     this.setState({
       showStores: !this.state.showStores
     });
@@ -131,6 +132,7 @@ class App extends Component {
             stores={this.state.stores}
             openStore={this.state.openStore}
             orderBy={this.state.orderBy}
+            toggleStores={this.toggleStores}
           />
           <Map stores={this.state.stores} showStore={this.showStore} openStore={this.state.openStore} />
         </div>

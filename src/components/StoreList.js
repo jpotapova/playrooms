@@ -22,6 +22,7 @@ class StoreList extends React.Component {
             key={store.title}
             showStore={this.props.showStore}
             openStore={this.props.openStore}
+            toggleStores={this.props.toggleStores}
           />
         ))}
       </div>

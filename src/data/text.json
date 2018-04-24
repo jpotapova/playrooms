@@ -8,5 +8,6 @@
   "locationError": "Nepavyko gauti buvimo vietos duomenų.",
   "pricetxt": "€/h",
   "title": "Pavadinimas",
-  "price": "Kaina"
+  "price": "Kaina",
+  "map": "Žemėlapyje"
 }

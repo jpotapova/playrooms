@@ -16,6 +16,11 @@ class MoreDetails extends Component {
         <WorkingHours hours={this.props.hours} />
         <p className="text-right">
           &nbsp;
+          <button className="btn btn-info" type="button" onClick={this.props.toggleStores}>
+            {txt.map}
+            <span className="glyphicon glyphicon-map-marker" />
+          </button>
+          &nbsp;
           <button className="btn btn-info" type="button" onClick={this.backToList}>
             {txt.back}
             <span className="glyphicon glyphicon-list" />
