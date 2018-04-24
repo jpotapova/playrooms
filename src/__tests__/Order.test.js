@@ -27,13 +27,13 @@ describe('Order', () => {
         lng: 25.280647
       }
     ];
-    let orderedStores = o.saveDistances(initialStores, position);
-    expect(orderedStores).toEqual([
+    let resultStores = o.saveDistances(initialStores, position);
+    expect(resultStores).toEqual([
       {
-        title: 'Ledinukas',
-        lat: 54.72347,
-        lng: 25.280647,
-        distance: 1.6
+        title: 'Rainbow parkas',
+        lat: 54.71011,
+        lng: 25.18736,
+        distance: 4.6
       },
       {
         title: 'Juokų maišėlis',
@@ -42,10 +42,10 @@ describe('Order', () => {
         distance: 4.5
       },
       {
-        title: 'Rainbow parkas',
-        lat: 54.71011,
-        lng: 25.18736,
-        distance: 4.6
+        title: 'Ledinukas',
+        lat: 54.72347,
+        lng: 25.280647,
+        distance: 1.6
       }
     ]);
   });

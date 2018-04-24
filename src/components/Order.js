@@ -23,11 +23,11 @@ class Order extends Component {
     // update all stores with distance from current location
     var updatedStores = stores.map(store => {
       var d = getDistanceFromLatLonInKm(position.latitude, position.longitude, store.lat, store.lng);
-      store['distance'] = d.toFixed(1);
+      store['distance'] = parseFloat(d.toFixed(1));
       return store;
     });
     // order by distance from my location
-    return orderStores(updatedStores, 'distance');
+    return updatedStores;
   }
   myLocation() {
     this.setState({
@@ -86,7 +86,7 @@ class Order extends Component {
                 </a>
               </li>
               <li>
-                <a href={null} onClick={() => this.selectOrder('distance')}>
+                <a href={null} onClick={this.myLocation}>
                   {txt.distance}
                 </a>
               </li>
