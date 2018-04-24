@@ -7,6 +7,8 @@ class Order extends Component {
 
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.selectOrder = this.selectOrder.bind(this);
+    this.getLiClass = this.getLiClass.bind(this);
+    this.getContainerClass = this.getContainerClass.bind(this);
     this.state = {
       orderDropdownOpen: false
     };
@@ -26,16 +28,23 @@ class Order extends Component {
       orderDropdownOpen: false
     });
   }
-  getClass(element) {
+  getLiClass(element) {
     if (element === this.props.orderBy) {
       return 'disabled';
     } else {
       return null;
     }
   }
+  getContainerClass(openStore) {
+    let result = 'filters';
+    if (openStore > -1) {
+      result = result + ' hide';
+    }
+    return result;
+  }
   render() {
     return (
-      <div className="filters">
+      <div className={this.getContainerClass(this.props.openStore)}>
         <div className="filters-container">
           <span className={this.props.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
             <span className="glyphicon glyphicon-repeat fast-right-spinner" />
@@ -46,17 +55,17 @@ class Order extends Component {
               &nbsp;{txt[this.props.orderBy]}&nbsp;<span className="caret" />
             </button>
             <ul className="dropdown-menu">
-              <li className={this.getClass('title')}>
+              <li className={this.getLiClass('title')}>
                 <a href={null} onClick={() => this.selectOrder('title')}>
                   {txt.title}
                 </a>
               </li>
-              <li className={this.getClass('price')}>
+              <li className={this.getLiClass('price')}>
                 <a href={null} onClick={() => this.selectOrder('price')}>
                   {txt.price}
                 </a>
               </li>
-              <li className={this.getClass('distance')}>
+              <li className={this.getLiClass('distance')}>
                 <a href={null} onClick={() => this.selectOrder('distance')}>
                   {txt.distance}
                 </a>

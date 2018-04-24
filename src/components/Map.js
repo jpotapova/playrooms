@@ -74,7 +74,8 @@ class Map extends Component {
       map.setZoom(16);
       map.fitBounds(bounds);
     } else {
-      map.panTo({ lat: stores[index].lat, lng: stores[index].lng });
+      let store = stores.find(store => store.id === index);
+      map.panTo({ lat: store.lat, lng: store.lng });
       map.setZoom(17);
     }
   }

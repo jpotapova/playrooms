@@ -22,8 +22,14 @@ test('Order by renders with loader icon ', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('Store', () => {
+test('Order component disables only selected order item', () => {
   const c = new Order({ orderBy: 'title' });
-  expect(c.getClass('title')).toBe('disabled');
-  expect(c.getClass('distance')).toBeNull();
+  expect(c.getLiClass('title')).toBe('disabled');
+  expect(c.getLiClass('distance')).toBeNull();
+});
+
+test('Order components is only displayed together with the list of stores', () => {
+  const c = new Order({ orderBy: 'title' });
+  expect(c.getContainerClass(-1)).toBe('filters');
+  expect(c.getContainerClass(1)).toBe('filters hide');
 });

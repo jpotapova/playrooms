@@ -123,6 +123,7 @@ class App extends Component {
           updateOrderBy={this.updateOrderBy}
           loadingLocation={this.state.loadingLocation}
           myLocation={this.myLocation}
+          openStore={this.state.openStore}
         />
 
         <ToggleButton
