@@ -64,3 +64,47 @@ test('Order stores by price', () => {
   ];
   expect(orderStores(initialStores, 'price')).toEqual(expectedStores);
 });
+
+test('Unknown price goes to the end of the list', () => {
+  let initialStores = [
+    {
+      title: 'Rainbow parkas',
+      price: {
+        h: 0
+      }
+    },
+    {
+      title: 'Juokų maišėlis',
+      price: {
+        h: 5
+      }
+    },
+    {
+      title: 'Ledinukas',
+      price: {
+        h: 4
+      }
+    }
+  ];
+  let expectedStores = [
+    {
+      title: 'Ledinukas',
+      price: {
+        h: 4
+      }
+    },
+    {
+      title: 'Juokų maišėlis',
+      price: {
+        h: 5
+      }
+    },
+    {
+      title: 'Rainbow parkas',
+      price: {
+        h: 0
+      }
+    }
+  ];
+  expect(orderStores(initialStores, 'price')).toEqual(expectedStores);
+});

@@ -18,8 +18,8 @@ function orderStores(stores, sortBy) {
   return stores.sort((store1, store2) => {
     let compare1, compare2;
     if (sortBy === 'price') {
-      compare1 = store1.price.h;
-      compare2 = store2.price.h;
+      compare1 = store1.price.h || 10000;
+      compare2 = store2.price.h || 10000;
     } else {
       compare1 = store1[sortBy];
       compare2 = store2[sortBy];

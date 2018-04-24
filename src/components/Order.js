@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import txt from '../data/text';
-import { getDistanceFromLatLonInKm, orderStores } from '../helpers';
+import { getDistanceFromLatLonInKm } from '../helpers';
 
 class Order extends Component {
   constructor(props) {
