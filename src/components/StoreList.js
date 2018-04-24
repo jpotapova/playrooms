@@ -18,11 +18,12 @@ class StoreList extends React.Component {
         {orderStores(this.props.stores, this.props.orderBy).map((store, index) => (
           <Store
             store={store}
-            id={index}
+            id={store.id}
             key={store.title}
             showStore={this.props.showStore}
             openStore={this.props.openStore}
             toggleStores={this.props.toggleStores}
+            mobile={this.props.mobile}
           />
         ))}
       </div>

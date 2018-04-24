@@ -23,6 +23,7 @@ class App extends Component {
     this.state = {
       orderBy: 'title',
       desktop: true,
+      mobile: false,
       showStores: true,
       openStore: -1,
       stores: storeList.stores,
@@ -36,7 +37,6 @@ class App extends Component {
 
   toggleStores() {
     // show/hide list of stores
-    console.log('toggle');
     this.setState({
       showStores: !this.state.showStores
     });
@@ -49,10 +49,17 @@ class App extends Component {
 
   componentDidMount() {
     // detect large screen
-    const mq = window.matchMedia('(min-width: 1025px)');
-    this.setState({ desktop: mq.matches });
-    mq.addListener(e => {
+    const mqDesktop = window.matchMedia('(min-width: 1025px)');
+    this.setState({ desktop: mqDesktop.matches });
+    mqDesktop.addListener(e => {
       this.setState({ desktop: e.matches });
+    });
+
+    // detect small screen
+    const mqMobile = window.matchMedia('(max-width: 610px)');
+    this.setState({ mobile: mqMobile.matches });
+    mqMobile.addListener(e => {
+      this.setState({ mobile: e.matches });
     });
   }
 
@@ -127,6 +134,7 @@ class App extends Component {
         <div className="store-locator">
           <StoreList
             desktop={this.state.desktop}
+            mobile={this.state.mobile}
             showStore={this.showStore}
             showStores={this.state.showStores}
             stores={this.state.stores}

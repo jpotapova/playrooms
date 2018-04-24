@@ -46,6 +46,7 @@ class Store extends Component {
           id={this.props.id}
           showStore={this.props.showStore}
           toggleStores={this.props.toggleStores}
+          mobile={this.props.mobile}
         />
       </div>
     );

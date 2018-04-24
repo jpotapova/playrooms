@@ -35,3 +35,23 @@ test('More Details renders the same when different is open', () => {
   let tree = c.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('Displays toMap button on small screens', () => {
+  let props = {
+    openStore: 1,
+    id: 1,
+    hours: [['I-V', '12:00 — 21:00'], ['VI-VII', '10:00 — 21:00']]
+  };
+  let c = new MoreDetails(props);
+  expect(c.getClass(true)).toBe('btn btn-info');
+});
+
+test('Hides toMap button on big screens', () => {
+  let props = {
+    openStore: 1,
+    id: 1,
+    hours: [['I-V', '12:00 — 21:00'], ['VI-VII', '10:00 — 21:00']]
+  };
+  let c = new MoreDetails(props);
+  expect(c.getClass(false)).toBe('btn btn-info hide');
+});

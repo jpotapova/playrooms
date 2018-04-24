@@ -10,13 +10,20 @@ class MoreDetails extends Component {
   backToList() {
     this.props.showStore();
   }
+  getClass(isMobile) {
+    let result = 'btn btn-info';
+    if (!isMobile) {
+      result = result + ' hide';
+    }
+    return result;
+  }
   render() {
     return (
       <div className={this.props.openStore === this.props.id ? 'more-details' : 'more-details hidden'}>
         <WorkingHours hours={this.props.hours} />
         <p className="text-right">
           &nbsp;
-          <button className="btn btn-info" type="button" onClick={this.props.toggleStores}>
+          <button className={this.getClass(this.props.mobile)} type="button" onClick={this.props.toggleStores}>
             {txt.map}
             <span className="glyphicon glyphicon-map-marker" />
           </button>
