@@ -9,8 +9,6 @@ class Store extends Component {
     super(props);
     this.showStore = this.showStore.bind(this);
     this.getClass = this.getClass.bind(this);
-
-    this.store = this.props.store;
   }
   getClass(id, openStoreId) {
     // animate element entrance when single store is selected
@@ -31,19 +29,19 @@ class Store extends Component {
   render() {
     return (
       <div className={this.getClass(this.props.id, this.props.openStore)}>
-        <Distance distance={this.store.distance} />
-        <Price price={this.store.price} />
+        <Distance distance={this.props.store.distance} />
+        <Price price={this.props.store.price} />
         <MainDetails
           showStore={this.showStore}
-          title={this.store.title}
-          area={this.store.area}
-          address={this.store.address}
-          web={this.store.web}
-          weblink={this.store.weblink}
-          phone={this.store.phone}
+          title={this.props.store.title}
+          area={this.props.store.area}
+          address={this.props.store.address}
+          web={this.props.store.web}
+          weblink={this.props.store.weblink}
+          phone={this.props.store.phone}
         />
         <MoreDetails
-          hours={this.store.hours}
+          hours={this.props.store.hours}
           openStore={this.props.openStore}
           id={this.props.id}
           showStore={this.props.showStore}

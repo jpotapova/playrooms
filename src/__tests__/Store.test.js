@@ -1,6 +1,7 @@
 import React from 'react';
 import { Store } from '../components/Store';
 import storeData from '../data/stores';
+import renderer from 'react-test-renderer';
 
 describe('Store', () => {
   const s = new Store({ store: storeData.stores[0] });
@@ -22,4 +23,32 @@ describe('Store', () => {
     let openStoreId = 1;
     expect(s.getClass(id, openStoreId)).toBe('list-group-item animated fadeIn');
   });
+});
+
+test('Store renders correctly when it is closed', () => {
+  let props = {
+    id: 1,
+    openStore: 2,
+    showStore: () => {},
+    store: storeData.stores[0]
+  };
+  Object.assign(props);
+
+  const c = renderer.create(<Store {...props} />);
+  let tree = c.toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test('Store renders correctly when it is open', () => {
+  let props = {
+    id: 1,
+    openStore: 1,
+    showStore: () => {},
+    store: storeData.stores[0]
+  };
+  Object.assign(props);
+
+  const c = renderer.create(<Store {...props} />);
+  let tree = c.toJSON();
+  expect(tree).toMatchSnapshot();
 });
