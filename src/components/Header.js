@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import txt from '../data/text';
 
 class Header extends Component {
   render() {

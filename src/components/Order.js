@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 import txt from '../data/text';
 import { getDistanceFromLatLonInKm, orderStores } from '../helpers';
 
@@ -9,6 +8,7 @@ class Order extends Component {
     this.myLocation = this.myLocation.bind(this);
     this.saveDistances = this.saveDistances.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.selectOrder = this.selectOrder.bind(this);
     this.state = {
       loadingLocation: false,
       orderDropdownOpen: false
@@ -58,7 +58,9 @@ class Order extends Component {
   }
   selectOrder(orderBy) {
     this.props.updateOrderBy(orderBy);
-    this.props.updateStores(orderStores(this.props.stores, orderBy));
+    this.setState({
+      orderDropdownOpen: false
+    });
   }
   render() {
     return (
@@ -74,13 +76,19 @@ class Order extends Component {
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a href="#">{txt.title}</a>
+                <a href={null} onClick={() => this.selectOrder('title')}>
+                  {txt.title}
+                </a>
               </li>
               <li>
-                <a href="#">{txt.price}</a>
+                <a href={null} onClick={() => this.selectOrder('price')}>
+                  {txt.price}
+                </a>
               </li>
               <li>
-                <a href="#">{txt.distance}</a>
+                <a href={null} onClick={() => this.selectOrder('distance')}>
+                  {txt.distance}
+                </a>
               </li>
             </ul>
           </div>

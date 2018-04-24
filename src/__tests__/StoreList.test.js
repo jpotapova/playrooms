@@ -30,7 +30,8 @@ test('Store list always statically renders on desktop with all stores', () => {
     stores: storeData.stores,
     showStores: () => {},
     showStore: () => {},
-    openStore: -1
+    openStore: -1,
+    orderBy: 'title'
   };
   const c = renderer.create(<StoreList {...props} />);
   let tree = c.toJSON();
@@ -43,7 +44,8 @@ test('Store list always statically renders on desktop with one store open', () =
     stores: storeData.stores,
     showStores: () => {},
     showStore: () => {},
-    openStore: 1
+    openStore: 1,
+    orderBy: 'title'
   };
   const c = renderer.create(<StoreList {...props} />);
   let tree = c.toJSON();
@@ -56,7 +58,8 @@ test('Store list is animated on non-desktop when no stores are open', () => {
     stores: storeData.stores,
     showStores: () => {},
     showStore: () => {},
-    openStore: -1
+    openStore: -1,
+    orderBy: 'title'
   };
   const c = renderer.create(<StoreList {...props} />);
   let tree = c.toJSON();
@@ -69,7 +72,8 @@ test('Store list is animated on non-desktop when one store is open', () => {
     stores: storeData.stores,
     showStores: () => {},
     showStore: () => {},
-    openStore: 1
+    openStore: 1,
+    orderBy: 'title'
   };
   const c = renderer.create(<StoreList {...props} />);
   let tree = c.toJSON();

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Store } from './Store.js';
+import { orderStores } from '../helpers';
 
 class StoreList extends React.Component {
   getClass(desktop, showStores) {
@@ -14,7 +15,7 @@ class StoreList extends React.Component {
   render() {
     return (
       <div className={this.getClass(this.props.desktop, this.props.showStores)}>
-        {this.props.stores.map((store, index) => (
+        {orderStores(this.props.stores, this.props.orderBy).map((store, index) => (
           <Store
             store={store}
             id={index}

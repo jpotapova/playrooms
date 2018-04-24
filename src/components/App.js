@@ -7,7 +7,6 @@ import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Order } from './Order';
-import { orderStores } from '../helpers';
 
 class App extends Component {
   constructor(props) {
@@ -17,15 +16,14 @@ class App extends Component {
 
     this.showStore = this.showStore.bind(this);
     this.updateStores = this.updateStores.bind(this);
-
-    let initialOrder = 'title';
+    this.updateOrderBy = this.updateOrderBy.bind(this);
 
     this.state = {
-      orderBy: initialOrder,
+      orderBy: 'title',
       desktop: true,
       showStores: true,
       openStore: -1,
-      stores: orderStores(storeList.stores, initialOrder)
+      stores: storeList.stores
     };
   }
 
@@ -66,12 +64,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <Order
-          updateStores={this.updateStores}
-          stores={this.state.stores}
-          orderBy={this.state.orderBy}
-          updateOrderBy={this.updateOrderBy}
-        />
+        <Order stores={this.state.stores} orderBy={this.state.orderBy} updateOrderBy={this.updateOrderBy} />
 
         <ToggleButton
           showStores={this.state.showStores}
@@ -86,6 +79,7 @@ class App extends Component {
             showStores={this.state.showStores}
             stores={this.state.stores}
             openStore={this.state.openStore}
+            orderBy={this.state.orderBy}
           />
           <Map stores={this.state.stores} showStore={this.showStore} openStore={this.state.openStore} />
         </div>

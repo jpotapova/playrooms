@@ -1,5 +1,6 @@
 import React from 'react';
 import { Order } from '../components/Order';
+import renderer from 'react-test-renderer';
 
 describe('Order', () => {
   const o = new Order();
@@ -48,4 +49,13 @@ describe('Order', () => {
       }
     ]);
   });
+});
+
+test('Order by renders correctly ', () => {
+  let props = {
+    orderBy: 'title'
+  };
+  const c = renderer.create(<Order {...props} />);
+  let tree = c.toJSON();
+  expect(tree).toMatchSnapshot();
 });
