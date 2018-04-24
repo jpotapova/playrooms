@@ -6,7 +6,7 @@ import { Footer } from './Footer.js';
 import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
-import { Filters } from './Filters';
+import { Order } from './Order';
 import { orderStores } from '../helpers';
 
 class App extends Component {
@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <Filters updateStores={this.updateStores} stores={this.state.stores} />
+        <Order updateStores={this.updateStores} stores={this.state.stores} />
 
         <ToggleButton
           showStores={this.state.showStores}

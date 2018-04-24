@@ -1,8 +1,8 @@
 import React from 'react';
-import { Filters } from '../components/Filters';
+import { Order } from '../components/Order';
 
-describe('Filters', () => {
-  const f = new Filters();
+describe('Order', () => {
+  const f = new Order();
 
   test('order by distance', () => {
     let position = {

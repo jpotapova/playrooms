@@ -8,6 +8,11 @@ h1 {
   background-color: #f89406;
 }
 
+.dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
 .page-header {
   border-bottom: 0;
   padding-bottom: 0;

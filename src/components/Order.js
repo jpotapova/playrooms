@@ -3,14 +3,21 @@ import { Button } from 'react-bootstrap';
 import txt from '../data/text';
 import { getDistanceFromLatLonInKm, orderStores } from '../helpers';
 
-class Filters extends Component {
+class Order extends Component {
   constructor(props) {
     super(props);
     this.myLocation = this.myLocation.bind(this);
     this.saveDistances = this.saveDistances.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
     this.state = {
-      loadingLocation: false
+      loadingLocation: false,
+      orderDropdownOpen: false
     };
+  }
+  toggleDropdown() {
+    this.setState({
+      orderDropdownOpen: !this.state.orderDropdownOpen
+    });
   }
   saveDistances(stores, position) {
     // update all stores with distance from current location
@@ -56,26 +63,20 @@ class Filters extends Component {
           <span className={this.state.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
             <span className="glyphicon glyphicon-repeat fast-right-spinner" />
           </span>
-          <div className="btn-group">
-            <button
-              type="button"
-              className="btn btn-info dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <span className="glyphicon glyphicon-sort-by-attributes" aria-hidden="true" /> Pavadinimas{' '}
-              <span className="caret" />
+          <div className={this.state.orderDropdownOpen ? 'btn-group open' : 'btn-group'}>
+            <button type="button" className="btn btn-info dropdown-toggle" onClick={this.toggleDropdown}>
+              <span className="glyphicon glyphicon-sort-by-attributes" aria-hidden="true" />
+              &nbsp;{txt.title}&nbsp;<span className="caret" />
             </button>
             <ul className="dropdown-menu">
               <li>
-                <a href="#">Pavadinimas</a>
+                <a href="#">{txt.title}</a>
               </li>
               <li>
-                <a href="#">Kaina</a>
+                <a href="#">{txt.price}</a>
               </li>
               <li>
-                <a href="#">Atstumas</a>
+                <a href="#">{txt.distance}</a>
               </li>
             </ul>
           </div>
@@ -85,4 +86,4 @@ class Filters extends Component {
   }
 }
 
-export { Filters };
+export { Order };

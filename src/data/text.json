@@ -1,10 +1,12 @@
 {
-  "distance": "Rikiuoti pagal atstumą",
+  "distance": "Atstumas",
   "show": "Sąrašas ",
   "hide": "Žemėlapis ",
   "back": "Atgal ",
   "phone": "tel. ",
   "measurement": " km",
   "locationError": "Nepavyko gauti buvimo vietos duomenų.",
-  "price": "€/h"
+  "price": "€/h",
+  "title": "Pavadinimas",
+  "price": "Kaina"
 }
