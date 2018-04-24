@@ -79,7 +79,11 @@ class App extends Component {
           loadingLocation: false
         });
 
-        if (!samePosition(this.state.position, position.coords)) {
+        if (samePosition(this.state.position, position.coords)) {
+          this.setState({
+            orderBy: 'distance'
+          });
+        } else {
           let stores = saveDistances(this.state.stores, position.coords);
           this.setState({
             position: position.coords,
