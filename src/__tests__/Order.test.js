@@ -2,7 +2,7 @@ import React from 'react';
 import { Order } from '../components/Order';
 
 describe('Order', () => {
-  const f = new Order();
+  const o = new Order();
 
   test('order by distance', () => {
     let position = {
@@ -26,7 +26,7 @@ describe('Order', () => {
         lng: 25.280647
       }
     ];
-    let orderedStores = f.saveDistances(initialStores, position);
+    let orderedStores = o.saveDistances(initialStores, position);
     expect(orderedStores).toEqual([
       {
         title: 'Ledinukas',

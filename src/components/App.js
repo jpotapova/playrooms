@@ -18,11 +18,14 @@ class App extends Component {
     this.showStore = this.showStore.bind(this);
     this.updateStores = this.updateStores.bind(this);
 
+    let initialOrder = 'title';
+
     this.state = {
+      orderBy: initialOrder,
       desktop: true,
       showStores: true,
       openStore: -1,
-      stores: orderStores(storeList.stores, 'title')
+      stores: orderStores(storeList.stores, initialOrder)
     };
   }
 
@@ -53,11 +56,22 @@ class App extends Component {
     });
   }
 
+  updateOrderBy(orderBy) {
+    this.setState({
+      orderBy: orderBy
+    });
+  }
+
   render() {
     return (
       <div className="container">
         <Header />
-        <Order updateStores={this.updateStores} stores={this.state.stores} />
+        <Order
+          updateStores={this.updateStores}
+          stores={this.state.stores}
+          orderBy={this.state.orderBy}
+          updateOrderBy={this.updateOrderBy}
+        />
 
         <ToggleButton
           showStores={this.state.showStores}

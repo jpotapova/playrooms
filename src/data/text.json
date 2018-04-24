@@ -6,7 +6,7 @@
   "phone": "tel. ",
   "measurement": " km",
   "locationError": "Nepavyko gauti buvimo vietos duomenų.",
-  "price": "€/h",
+  "pricetxt": "€/h",
   "title": "Pavadinimas",
   "price": "Kaina"
 }

@@ -6,7 +6,7 @@ class Price extends Component {
     return (
       <span className="badge badge-warning">
         {this.props.price.h || '?'}
-        {txt.price}
+        {txt.pricetxt}
       </span>
     );
   }

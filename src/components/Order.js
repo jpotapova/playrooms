@@ -56,6 +56,10 @@ class Order extends Component {
       }
     );
   }
+  selectOrder(orderBy) {
+    this.props.updateOrderBy(orderBy);
+    this.props.updateStores(orderStores(this.props.stores, orderBy));
+  }
   render() {
     return (
       <div className="filters">
@@ -66,7 +70,7 @@ class Order extends Component {
           <div className={this.state.orderDropdownOpen ? 'btn-group open' : 'btn-group'}>
             <button type="button" className="btn btn-info dropdown-toggle" onClick={this.toggleDropdown}>
               <span className="glyphicon glyphicon-sort-by-attributes" aria-hidden="true" />
-              &nbsp;{txt.title}&nbsp;<span className="caret" />
+              &nbsp;{txt[this.props.orderBy]}&nbsp;<span className="caret" />
             </button>
             <ul className="dropdown-menu">
               <li>
