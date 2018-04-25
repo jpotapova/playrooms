@@ -36,7 +36,7 @@ class Order extends Component {
     }
   }
   getContainerClass(openStore) {
-    let result = 'filters';
+    let result = 'order';
     if (openStore > -1) {
       result = result + ' hide';
     }
@@ -45,7 +45,7 @@ class Order extends Component {
   render() {
     return (
       <div className={this.getContainerClass(this.props.openStore)}>
-        <div className="filters-container">
+        <div className="order-container">
           <span className={this.props.loadingLocation ? ' spinner-container ' : 'spinner-container hide'}>
             <span className="glyphicon glyphicon-repeat fast-right-spinner" />
           </span>
