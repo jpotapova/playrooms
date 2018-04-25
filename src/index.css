@@ -8,7 +8,7 @@ h1 {
   background-color: #f89406;
 }
 
-.dropdown-menu {
+.order-container .dropdown-menu {
   right: 0;
   left: auto;
 }
