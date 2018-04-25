@@ -1,4 +1,5 @@
 {
+  "cities": ["Vilnius", "Kaunas"],
   "stores": [
     {
       "id": 17,

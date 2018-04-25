@@ -49,4 +49,8 @@ function samePosition(pos1, pos2) {
   return pos1.latitude === pos2.latitude && pos1.longitude === pos2.longitude;
 }
 
-export { getDistanceFromLatLonInKm, orderStores, saveDistances, samePosition };
+function filterStores(stores, city) {
+  return stores.filter(store => store.city === city);
+}
+
+export { getDistanceFromLatLonInKm, orderStores, saveDistances, samePosition, filterStores };

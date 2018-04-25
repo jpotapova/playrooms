@@ -1,5 +1,5 @@
 import React from 'react';
-import { orderStores, saveDistances, samePosition } from '../helpers';
+import { orderStores, saveDistances, samePosition, filterStores } from '../helpers';
 
 test('Order stores by title', () => {
   let initialStores = [{ title: 'Rainbow parkas' }, { title: 'Juokų maišėlis' }, { title: 'Ledinukas' }];
@@ -190,4 +190,45 @@ test('samePosition recognises position change ', () => {
     longitude: 25.27158
   };
   expect(samePosition(initialPosition, newPosition)).toBe(false);
+});
+
+test('filterStores returns only relevant store entries', () => {
+  let initialStores = [
+    {
+      id: 17,
+      title: 'Smuflandas',
+      city: 'Kaunas'
+    },
+    {
+      id: 18,
+      title: 'Karkarlandas',
+      city: 'Kaunas'
+    },
+    {
+      id: 15,
+      title: 'Nuotykių miestas, Akropolis',
+      city: 'Vilnius'
+    }
+  ];
+  let vilniusStores = [
+    {
+      id: 15,
+      title: 'Nuotykių miestas, Akropolis',
+      city: 'Vilnius'
+    }
+  ];
+  let kaunasStores = [
+    {
+      id: 17,
+      title: 'Smuflandas',
+      city: 'Kaunas'
+    },
+    {
+      id: 18,
+      title: 'Karkarlandas',
+      city: 'Kaunas'
+    }
+  ];
+  expect(filterStores(initialStores, 'Vilnius')).toEqual(vilniusStores);
+  expect(filterStores(initialStores, 'Kaunas')).toEqual(kaunasStores);
 });
