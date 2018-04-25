@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import storeList from '../data/stores';
+import storeData from '../data/stores';
 
 import { Header } from './Header.js';
 import { Footer } from './Footer.js';
@@ -7,6 +7,7 @@ import { Map } from './Map.js';
 import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Order } from './Order';
+import { Filters } from './Filters';
 import { saveDistances, samePosition } from '../helpers';
 import txt from '../data/text';
 
@@ -17,8 +18,8 @@ class App extends Component {
     this.toggleStores = this.toggleStores.bind(this);
     this.myLocation = this.myLocation.bind(this);
     this.showStore = this.showStore.bind(this);
-    this.updateStores = this.updateStores.bind(this);
     this.updateOrderBy = this.updateOrderBy.bind(this);
+    this.chooseCity = this.chooseCity.bind(this);
 
     this.state = {
       orderBy: 'title',
@@ -26,12 +27,13 @@ class App extends Component {
       mobile: false,
       showStores: true,
       openStore: -1,
-      stores: storeList.stores,
+      stores: storeData.stores,
       position: {
         latitude: undefined,
         longitude: undefined
       },
-      loadingLocation: false
+      loadingLocation: false,
+      city: storeData.cities[0]
     };
   }
 
@@ -60,12 +62,6 @@ class App extends Component {
     this.setState({ mobile: mqMobile.matches });
     mqMobile.addListener(e => {
       this.setState({ mobile: e.matches });
-    });
-  }
-
-  updateStores(stores) {
-    this.setState({
-      stores: stores
     });
   }
 
@@ -114,10 +110,18 @@ class App extends Component {
     );
   }
 
+  chooseCity(city) {
+    this.setState({
+      city: city
+    });
+  }
+
   render() {
     return (
       <div className="container">
         <Header />
+
+        <Filters cities={storeData.cities} city={this.state.city} chooseCity={this.chooseCity} />
         <Order
           orderBy={this.state.orderBy}
           updateOrderBy={this.updateOrderBy}
