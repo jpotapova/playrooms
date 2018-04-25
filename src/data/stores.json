@@ -159,6 +159,22 @@
       "price": {
         "h": 2.5
       }
+    },
+    {
+      "id": 27,
+      "title": "Mauglis ir vaikai",
+      "city": "Kaunas",
+      "area": "Dainava",
+      "address": "Pramonės pr., 29, PC “Maxima XXX” , 2 aukštas ",
+      "phone": " +370 657 85 537",
+      "weblink": "http://mauglis.net/",
+      "web": "mauglis.net",
+      "hours": [["I-VII", "10:00 — 21:00"]],
+      "lat": 54.915206,
+      "lng": 23.985514,
+      "price": {
+        "h": 3
+      }
     }
   ]
 }
