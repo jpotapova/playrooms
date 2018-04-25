@@ -8,7 +8,7 @@ import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Order } from './Order';
 import { Filters } from './Filters';
-import { saveDistances, samePosition } from '../helpers';
+import { saveDistances, samePosition, filterStores } from '../helpers';
 import txt from '../data/text';
 
 class App extends Component {
@@ -21,6 +21,8 @@ class App extends Component {
     this.updateOrderBy = this.updateOrderBy.bind(this);
     this.chooseCity = this.chooseCity.bind(this);
 
+    const initialCity = storeData.cities[0];
+
     this.state = {
       orderBy: 'title',
       desktop: true,
@@ -28,12 +30,13 @@ class App extends Component {
       showStores: true,
       openStore: -1,
       stores: storeData.stores,
+      visibleStores: filterStores(storeData.stores, initialCity),
       position: {
         latitude: undefined,
         longitude: undefined
       },
       loadingLocation: false,
-      city: storeData.cities[0]
+      city: initialCity
     };
   }
 
@@ -112,7 +115,8 @@ class App extends Component {
 
   chooseCity(city) {
     this.setState({
-      city: city
+      city: city,
+      visibleStores: filterStores(storeData.stores, city)
     });
   }
 
@@ -142,12 +146,12 @@ class App extends Component {
             mobile={this.state.mobile}
             showStore={this.showStore}
             showStores={this.state.showStores}
-            stores={this.state.stores}
+            stores={this.state.visibleStores}
             openStore={this.state.openStore}
             orderBy={this.state.orderBy}
             toggleStores={this.toggleStores}
           />
-          <Map stores={this.state.stores} showStore={this.showStore} openStore={this.state.openStore} />
+          <Map stores={this.state.visibleStores} showStore={this.showStore} openStore={this.state.openStore} />
         </div>
 
         <Footer />
