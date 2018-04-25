@@ -229,6 +229,6 @@ test('filterStores returns only relevant store entries', () => {
       city: 'Kaunas'
     }
   ];
-  expect(filterStores(initialStores, 'Vilnius')).toEqual(vilniusStores);
-  expect(filterStores(initialStores, 'Kaunas')).toEqual(kaunasStores);
+  expect(filterStores(initialStores, { city: 'Vilnius' })).toEqual(vilniusStores);
+  expect(filterStores(initialStores, { city: 'Kaunas' })).toEqual(kaunasStores);
 });

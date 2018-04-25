@@ -19,9 +19,10 @@ class App extends Component {
     this.myLocation = this.myLocation.bind(this);
     this.showStore = this.showStore.bind(this);
     this.updateOrderBy = this.updateOrderBy.bind(this);
-    this.chooseCity = this.chooseCity.bind(this);
+    this.updateFilters = this.updateFilters.bind(this);
 
     const initialCity = storeData.cities[0];
+    const initialHours = 'all';
 
     this.state = {
       orderBy: 'title',
@@ -30,13 +31,17 @@ class App extends Component {
       showStores: true,
       openStore: -1,
       stores: storeData.stores,
-      visibleStores: filterStores(storeData.stores, initialCity),
+      visibleStores: filterStores(storeData.stores, {
+        city: initialCity,
+        hours: initialHours
+      }),
       position: {
         latitude: undefined,
         longitude: undefined
       },
       loadingLocation: false,
-      city: initialCity
+      city: initialCity,
+      hours: initialHours
     };
   }
 
@@ -113,11 +118,21 @@ class App extends Component {
     );
   }
 
-  chooseCity(city) {
-    this.setState({
-      city: city,
-      visibleStores: filterStores(storeData.stores, city)
-    });
+  updateFilters(prop, value) {
+    // by default take current state
+    let filters = {
+      hours: this.state.hours,
+      city: this.state.city
+    };
+    // update filters value with the new supplied filter
+    filters[prop] = value;
+    // prepare new state obj by filtering the stores
+    let newState = {
+      visibleStores: filterStores(storeData.stores, filters)
+    };
+    newState[prop] = value;
+    // set the state with new filters and newly filtered stores
+    this.setState(newState);
   }
 
   render() {
@@ -125,7 +140,12 @@ class App extends Component {
       <div className="container">
         <Header />
 
-        <Filters cities={storeData.cities} city={this.state.city} chooseCity={this.chooseCity} />
+        <Filters
+          cities={storeData.cities}
+          city={this.state.city}
+          updateFilters={this.updateFilters}
+          hours={this.state.hours}
+        />
         <Order
           orderBy={this.state.orderBy}
           updateOrderBy={this.updateOrderBy}
