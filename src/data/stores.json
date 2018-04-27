@@ -10,7 +10,37 @@
       "phone": "+370 615 88 063",
       "weblink": "https://rainbowparkas.lt/",
       "web": "rainbowparkas.lt",
-      "hours": [["I-V", "12:00 — 21:00"], ["VI-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-V", "12:00 — 21:00"], ["VI-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 12,
+          "to": 21
+        },
+        {
+          "from": 12,
+          "to": 21
+        },
+        {
+          "from": 12,
+          "to": 21
+        },
+        {
+          "from": 12,
+          "to": 21
+        },
+        {
+          "from": 12,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.71011,
       "lng": 25.18736,
       "price": {
@@ -26,7 +56,37 @@
       "phone": "+370 684 44 768",
       "weblink": "http://www.juokumaiselis.com/",
       "web": "www.juokumaiselis.com",
-      "hours": [["I-V", "16:00 — 21:00"]],
+      "hoursTxt": [["I-V", "16:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 16,
+          "to": 21
+        },
+        {
+          "from": 16,
+          "to": 21
+        },
+        {
+          "from": 16,
+          "to": 21
+        },
+        {
+          "from": 16,
+          "to": 21
+        },
+        {
+          "from": 16,
+          "to": 21
+        },
+        {
+          "from": 0,
+          "to": 0
+        },
+        {
+          "from": 0,
+          "to": 0
+        }
+      ],
       "lat": 54.677093,
       "lng": 25.254868,
       "price": {
@@ -42,7 +102,37 @@
       "phone": "+370 655 12 001",
       "weblink": "http://www.ledinukas.com/",
       "web": "www.ledinukas.com",
-      "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "10:00 — 20:00"]],
+      "hoursTxt": [["I-V", "16:00 — 20:00"], ["VI-VII", "10:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ],
       "lat": 54.72347,
       "lng": 25.280647,
       "price": {
@@ -58,7 +148,37 @@
       "phone": "+370 640 56 704",
       "weblink": "https://saulutevaikams.lt/vaiku-zaidimu-kambarys",
       "web": "saulutevaikams.lt",
-      "hours": [["I-V", "11:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
+      "hoursTxt": [["I-V", "11:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
+      "hours": [
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 18
+        },
+        {
+          "from": 11,
+          "to": 18
+        }
+      ],
       "lat": 54.707842,
       "lng": 25.228294,
       "price": {
@@ -74,7 +194,37 @@
       "phone": "+370 660 06 777",
       "weblink": "http://linksmuolis.lt/apie-mus/",
       "web": "linksmuolis.lt",
-      "hours": [["I-VII", "10:00 — 22:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 22:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        }
+      ],
       "lat": 54.683317,
       "lng": 25.212928,
       "price": {
@@ -90,7 +240,37 @@
       "phone": "+370 695 811 00",
       "weblink": "http://www.skraiduolis.lt/",
       "web": "www.skraiduolis.lt",
-      "hours": [["I-V", "16:30 — 20:30"], ["VI-VII", "10:00 — 20:00"]],
+      "hoursTxt": [["I-V", "16:30 — 20:30"], ["VI-VII", "10:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 16.5,
+          "to": 20.5
+        },
+        {
+          "from": 16.5,
+          "to": 20.5
+        },
+        {
+          "from": 16.5,
+          "to": 20.5
+        },
+        {
+          "from": 16.5,
+          "to": 20.5
+        },
+        {
+          "from": 16.5,
+          "to": 20.5
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ],
       "lat": 54.726684,
       "lng": 25.232827,
       "price": {
@@ -106,7 +286,37 @@
       "phone": "+370 605 54 056",
       "weblink": "http://www.sakarmakar.lt/",
       "web": "www.sakarmakar.lt",
-      "hours": [["I-VI", "10:00 — 21:00"], ["VII", "pagal susitarimą"]],
+      "hoursTxt": [["I-VI", "10:00 — 21:00"], ["VII", "pagal susitarimą"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 0,
+          "to": 0
+        }
+      ],
       "lat": 54.710849,
       "lng": 25.183397,
       "price": {
@@ -122,7 +332,37 @@
       "phone": "+370 616 82 888",
       "weblink": "http://vilnius.cosmos.place/",
       "web": "vilnius.cosmos.place",
-      "hours": [["I-VI", "15:00 — 21:00"], ["VI-VII", "11:00-20:00"]],
+      "hoursTxt": [["I-VI", "15:00 — 21:00"], ["VI-VII", "11:00-20:00"]],
+      "hours": [
+        {
+          "from": 15,
+          "to": 21
+        },
+        {
+          "from": 15,
+          "to": 21
+        },
+        {
+          "from": 15,
+          "to": 21
+        },
+        {
+          "from": 15,
+          "to": 21
+        },
+        {
+          "from": 15,
+          "to": 21
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        }
+      ],
       "lat": 54.714632,
       "lng": 25.298159,
       "price": {
@@ -139,7 +379,37 @@
       "phone": "+370 520 34 383; +370 618 44918",
       "weblink": "http://www.pramoguimperija.lt/lt/paslaugos/vaiku-gimtadieniai-vilniuje",
       "web": "www.pramoguimperija.lt",
-      "hours": [["I-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.740384,
       "lng": 25.228083,
       "price": {
@@ -155,7 +425,37 @@
       "phone": "+370 611 30 088",
       "weblink": "http://www.pramoguimperija.lt/lt/paslaugos/vaiku-gimtadieniai-zaidimu-kambarys-panorama",
       "web": "www.pramoguimperija.lt",
-      "hours": [["I-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.699853,
       "lng": 25.257877,
       "price": {
@@ -171,7 +471,37 @@
       "phone": "+370 620 74 094",
       "weblink": "http://www.mazujukaralyste.lt/",
       "web": "www.mazujukaralyste.lt",
-      "hours": [["I-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.693861,
       "lng": 25.276177,
       "price": {
@@ -187,7 +517,37 @@
       "phone": "+370 626 34 848",
       "weblink": "https://minimukunamukai.lt/",
       "web": "minimukunamukai.lt",
-      "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
+      "hoursTxt": [["I-V", "16:00 — 20:00"], ["VI-VII", "11:00 — 18:00"]],
+      "hours": [
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 18
+        },
+        {
+          "from": 11,
+          "to": 18
+        }
+      ],
       "lat": 54.7102,
       "lng": 25.188,
       "price": {
@@ -203,7 +563,37 @@
       "phone": "+370 682 29 056",
       "weblink": "https://www.mumukas.lt",
       "web": "www.mumukas.lt",
-      "hours": [["II-V", "11:00 — 19:00"]],
+      "hoursTxt": [["II-V", "11:00 — 19:00"]],
+      "hours": [
+        {
+          "from": 0,
+          "to": 0
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 0,
+          "to": 0
+        },
+        {
+          "from": 0,
+          "to": 0
+        }
+      ],
       "lat": 54.736323,
       "lng": 25.224945,
       "price": {
@@ -219,7 +609,37 @@
       "phone": "+370 645 26 624",
       "weblink": "https://www.facebook.com/zaidimukambaryssafari/",
       "web": "www.facebook.com/zaidimukambaryssafari",
-      "hours": [["I-V", "16:00 — 20:00"], ["VI-VII", "12:00 — 20:00"]],
+      "hoursTxt": [["I-V", "16:00 — 20:00"], ["VI-VII", "12:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 16,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        }
+      ],
       "lat": 54.690045,
       "lng": 25.426768,
       "price": {
@@ -235,7 +655,37 @@
       "phone": "+370 694 10 816",
       "weblink": "http://akropolis.lt/lt/vilnius/pramogos/nuotykiu-miestas",
       "web": "akropolis.lt/lt/vilnius/pramogos/nuotykiu-miestas",
-      "hours": [["I-V", "10:00 — 22:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 22:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        },
+        {
+          "from": 10,
+          "to": 22
+        }
+      ],
       "lat": 54.71031,
       "lng": 25.262675,
       "price": {
@@ -251,7 +701,37 @@
       "phone": "+370 671 31 944",
       "weblink": "http://www.salisalisa.lt/",
       "web": "www.salisalisa.lt",
-      "hours": [["I-VII", "11:00 — 20:00"]],
+      "hoursTxt": [["I-VII", "11:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        }
+      ],
       "lat": 54.714,
       "lng": 25.298,
       "price": {
@@ -270,7 +750,37 @@
       "phone": "+370 673 67 303",
       "weblink": "http://www.smuflandas.lt/",
       "web": "www.smuflandas.lt",
-      "hours": [["I-VII", "12:00 — 20:00"]],
+      "hoursTxt": [["I-VII", "12:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 12,
+          "to": 20
+        },
+        {
+          "from": 12,
+          "to": 20
+        },
+        {
+          "from": 12,
+          "to": 20
+        },
+        {
+          "from": 12,
+          "to": 20
+        },
+        {
+          "from": 12,
+          "to": 20
+        },
+        {
+          "from": 12,
+          "to": 20
+        },
+        {
+          "from": 12,
+          "to": 20
+        }
+      ],
       "lat": 54.917089,
       "lng": 23.94278,
       "price": {
@@ -286,7 +796,37 @@
       "phone": "+370 605 55 055",
       "weblink": "http://www.karkarlandas.lt/",
       "web": "www.karkarlandas.lt",
-      "hours": [["I-VII", "10:00 — 20:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ],
       "lat": 54.930839,
       "lng": 23.932412,
       "price": {
@@ -302,7 +842,37 @@
       "phone": "+370 674 54 010",
       "weblink": "http://www.basablusa.lt/",
       "web": "www.basablusa.lt",
-      "hours": [["I-V", "11:00 — 20:00"], ["VI-VII", "10:00 - 20:00"]],
+      "hoursTxt": [["I-V", "11:00 — 20:00"], ["VI-VII", "10:00 - 20:00"]],
+      "hours": [
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 11,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ],
       "lat": 54.905707,
       "lng": 23.902019,
       "price": {
@@ -318,7 +888,37 @@
       "phone": "+370 643 22 288",
       "weblink": "http://www.troliupica.lt/vaiku-zaidimu-kambarys",
       "web": "www.troliupica.lt/vaiku-zaidimu-kambarys",
-      "hours": [["I-VI", "11:00 — 19:00"]],
+      "hoursTxt": [["I-VI", "11:00 — 19:00"]],
+      "hours": [
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 11,
+          "to": 19
+        },
+        {
+          "from": 0,
+          "to": 0
+        }
+      ],
       "lat": 54.895945,
       "lng": 23.823346,
       "price": {
@@ -334,7 +934,37 @@
       "phone": "+370 672 30 080",
       "weblink": "http://www.dziungles.com/",
       "web": "www.dziungles.com",
-      "hours": [["I-V", "12:00 — 19:00"]],
+      "hoursTxt": [["I-V", "12:00 — 19:00"]],
+      "hours": [
+        {
+          "from": 12,
+          "to": 19
+        },
+        {
+          "from": 12,
+          "to": 19
+        },
+        {
+          "from": 12,
+          "to": 19
+        },
+        {
+          "from": 12,
+          "to": 19
+        },
+        {
+          "from": 12,
+          "to": 19
+        },
+        {
+          "from": 0,
+          "to": 0
+        },
+        {
+          "from": 0,
+          "to": 0
+        }
+      ],
       "lat": 54.827568,
       "lng": 23.873047,
       "price": {
@@ -350,7 +980,37 @@
       "phone": "+370 634 90 999",
       "weblink": "http://www.zaidimunamas.lt/kontaktai/",
       "web": "www.zaidimunamas.lt",
-      "hours": [["I", "9:00 — 19:00"], ["II-VII", "9:00 — 20:00"]],
+      "hoursTxt": [["I", "9:00 — 19:00"], ["II-VII", "9:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 9,
+          "to": 19
+        },
+        {
+          "from": 9,
+          "to": 20
+        },
+        {
+          "from": 9,
+          "to": 20
+        },
+        {
+          "from": 9,
+          "to": 20
+        },
+        {
+          "from": 9,
+          "to": 20
+        },
+        {
+          "from": 9,
+          "to": 20
+        },
+        {
+          "from": 9,
+          "to": 20
+        }
+      ],
       "lat": 54.907587,
       "lng": 23.915623,
       "price": {
@@ -366,7 +1026,37 @@
       "phone": "+370 615 65 953",
       "weblink": "http://www.pramoguimperija.lt/lt/paslaugos/vaiku-pramogu-centras-kaunas",
       "web": "www.pramoguimperija.lt/lt/paslaugos/vaiku-pramogu-centras-kaunas",
-      "hours": [["I-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.891706,
       "lng": 23.919478,
       "price": {
@@ -382,7 +1072,37 @@
       "phone": "+370 618 82 220",
       "weblink": "http://www.pokst.lt/",
       "web": "www.pokst.lt",
-      "hours": [["I-VII", "10:00 — 20:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 20:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ],
       "lat": 54.928005,
       "lng": 23.881839,
       "price": {
@@ -398,7 +1118,37 @@
       "phone": " +370 688 33 202",
       "weblink": "http://www.curiocity.lt/",
       "web": "www.curiocity.lt",
-      "hours": [["I-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.939354,
       "lng": 23.896812,
       "price": {
@@ -414,7 +1164,37 @@
       "phone": " +370 614 49 962",
       "weblink": "http://www.draugus.lt/",
       "web": "www.draugus.lt",
-      "hours": [["I-V", "10:00 — 14:00"]],
+      "hoursTxt": [["I-V", "10:00 — 14:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 14
+        },
+        {
+          "from": 10,
+          "to": 14
+        },
+        {
+          "from": 10,
+          "to": 14
+        },
+        {
+          "from": 10,
+          "to": 20
+        },
+        {
+          "from": 10,
+          "to": 14
+        },
+        {
+          "from": 0,
+          "to": 0
+        },
+        {
+          "from": 0,
+          "to": 0
+        }
+      ],
       "lat": 54.906639,
       "lng": 23.931575,
       "price": {
@@ -430,7 +1210,37 @@
       "phone": " +370 657 85 537",
       "weblink": "http://mauglis.net/",
       "web": "mauglis.net",
-      "hours": [["I-VII", "10:00 — 21:00"]],
+      "hoursTxt": [["I-VII", "10:00 — 21:00"]],
+      "hours": [
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        },
+        {
+          "from": 10,
+          "to": 21
+        }
+      ],
       "lat": 54.915206,
       "lng": 23.985514,
       "price": {

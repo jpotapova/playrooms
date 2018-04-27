@@ -41,7 +41,7 @@ class Store extends Component {
           phone={this.props.store.phone}
         />
         <MoreDetails
-          hours={this.props.store.hours}
+          hours={this.props.store.hoursTxt}
           openStore={this.props.openStore}
           id={this.props.id}
           showStore={this.props.showStore}
