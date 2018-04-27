@@ -163,4 +163,17 @@ h1 {
   .to-map {
     display: none;
   }
+
+  .list-group,
+  .map {
+    height: 450px;
+  }
+
+  .order {
+    clear: none;
+  }
+
+  .filters {
+    float: left;
+  }
 }

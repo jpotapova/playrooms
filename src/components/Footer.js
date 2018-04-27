@@ -4,8 +4,10 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <p>Atsiliepimai/pasiūlymai labai laukiami! el. p. potapova.jelizaveta@gmail.com</p>
-        <p>Įrankį sukūrė Jelizaveta Potapova. </p>
+        <p>
+          Įrankį sukūrė Jelizaveta Potapova. Atsiliepimai/pasiūlymai laukiami el. paštu potapova.jelizaveta@gmail.com
+        </p>
+        <p> </p>
       </footer>
     );
   }
