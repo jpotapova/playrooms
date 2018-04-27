@@ -30,6 +30,6 @@ test('Order component disables only selected order item', () => {
 
 test('Order components is only displayed together with the list of stores', () => {
   const c = new Order({ orderBy: 'title' });
-  expect(c.getContainerClass(-1)).toBe('order');
-  expect(c.getContainerClass(1)).toBe('order hide');
+  expect(c.getContainerClass(-1)).toBe('order-container');
+  expect(c.getContainerClass(1)).toBe('order-container hide');
 });

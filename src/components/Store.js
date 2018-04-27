@@ -24,7 +24,7 @@ class Store extends Component {
   }
   showStore() {
     // select single store
-    this.props.showStore(this.props.id);
+    this.props.showStore(this.props.store.id);
   }
   render() {
     return (

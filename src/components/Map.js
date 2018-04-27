@@ -25,8 +25,11 @@ class Map extends Component {
     return marker;
   }
   addMarker(markers, bounds, store, index) {
-    var position = { lat: store.lat, lng: store.lng };
-    markers.push(this.generateMarker(this.map, index, position));
+    let position = { lat: store.lat, lng: store.lng };
+    let m = this.generateMarker(this.map, store.id, position);
+    m.metadata = { id: store.id };
+    markers.push(m);
+
     bounds.extend(position);
     return [markers, bounds];
   }
@@ -51,15 +54,19 @@ class Map extends Component {
     this.initMarkers();
   }
   componentDidUpdate(prevProps) {
-    if (prevProps.openStore !== this.props.openStore) {
-      this.markers = this.colorMarkers(this.markers, this.props.openStore);
-      this.moveMap(this.map, this.bounds, this.props.openStore, this.props.stores);
-    }
+    setTimeout(() => {
+      this.initMap();
+      this.initMarkers();
+      if (prevProps.openStore !== this.props.openStore) {
+        this.markers = this.colorMarkers(this.markers, this.props.openStore);
+        this.moveMap(this.map, this.bounds, this.props.openStore, this.props.stores);
+      }
+    }, 10);
   }
   colorMarkers(markers, index) {
     // go through markers and assign appropriate colour
     markers.forEach((marker, markerIndex) => {
-      if (index === markerIndex) {
+      if (index === marker.metadata.id) {
         // active marker is red
         marker.setIcon('./icon-store-red.svg');
       } else {
