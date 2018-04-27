@@ -49,8 +49,26 @@ function samePosition(pos1, pos2) {
   return pos1.latitude === pos2.latitude && pos1.longitude === pos2.longitude;
 }
 
-function filterStores(stores, filters) {
-  return stores.filter(store => store.city === filters.city);
+function filterStores(stores, filters, nowIs = { day: 0, time: 0 }) {
+  if (filters.hours === 'openNow') {
+    return stores.filter(store => {
+      let suitableCity = store.city === filters.city;
+      let isAlreadyOpen = store.hours[nowIs.day].from <= nowIs.time;
+      let notYetClosed = store.hours[nowIs.day].to >= nowIs.time;
+      return suitableCity && isAlreadyOpen && notYetClosed;
+    });
+  } else {
+    return stores.filter(store => store.city === filters.city);
+  }
 }
 
-export { getDistanceFromLatLonInKm, orderStores, saveDistances, samePosition, filterStores };
+function calcNow(dateObj) {
+  let d = dateObj.getDay(); // return 0 for sunday and 6 for saturday
+  if (d === 0) d = 7; // make sunday the biggest number and monday smallest
+  return {
+    day: d - 1, // reduce by 1, to receive 0 for monday and 6 for sunday
+    time: dateObj.getHours()
+  };
+}
+
+export { getDistanceFromLatLonInKm, orderStores, saveDistances, samePosition, filterStores, calcNow };

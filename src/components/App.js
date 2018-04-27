@@ -8,7 +8,7 @@ import { ToggleButton } from './ToggleButton';
 import { StoreList } from './StoreList';
 import { Order } from './Order';
 import { Filters } from './Filters';
-import { saveDistances, samePosition, filterStores } from '../helpers';
+import { saveDistances, samePosition, filterStores, calcNow } from '../helpers';
 import txt from '../data/text';
 
 class App extends Component {
@@ -128,7 +128,7 @@ class App extends Component {
     filters[prop] = value;
     // prepare new state obj by filtering the stores
     let newState = {
-      visibleStores: filterStores(storeData.stores, filters)
+      visibleStores: filterStores(storeData.stores, filters, calcNow(new Date(Date.now())))
     };
     newState[prop] = value;
     // set the state with new filters and newly filtered stores

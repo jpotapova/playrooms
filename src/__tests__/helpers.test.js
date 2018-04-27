@@ -1,5 +1,5 @@
 import React from 'react';
-import { orderStores, saveDistances, samePosition, filterStores } from '../helpers';
+import { orderStores, saveDistances, samePosition, filterStores, calcNow } from '../helpers';
 
 test('Order stores by title', () => {
   let initialStores = [{ title: 'Rainbow parkas' }, { title: 'Juokų maišėlis' }, { title: 'Ledinukas' }];
@@ -192,7 +192,7 @@ test('samePosition recognises position change ', () => {
   expect(samePosition(initialPosition, newPosition)).toBe(false);
 });
 
-test('filterStores returns only relevant store entries', () => {
+test('filterStores returns only city-relevant store entries', () => {
   let initialStores = [
     {
       id: 17,
@@ -231,4 +231,202 @@ test('filterStores returns only relevant store entries', () => {
   ];
   expect(filterStores(initialStores, { city: 'Vilnius' })).toEqual(vilniusStores);
   expect(filterStores(initialStores, { city: 'Kaunas' })).toEqual(kaunasStores);
+});
+
+test('filterStores can return only city-relevant store entries that are open now', () => {
+  let initialStores = [
+    {
+      id: 17,
+      title: 'Smuflandas',
+      city: 'Kaunas',
+      hours: [
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        }
+      ]
+    },
+    {
+      id: 18,
+      title: 'Karkarlandas',
+      city: 'Kaunas',
+      hours: [
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 0,
+          to: 0
+        }
+      ]
+    },
+    {
+      id: 15,
+      title: 'Nuotykių miestas, Akropolis',
+      city: 'Vilnius',
+      hours: [
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        }
+      ]
+    }
+  ];
+  let vilniusStores = [
+    {
+      id: 15,
+      title: 'Nuotykių miestas, Akropolis',
+      city: 'Vilnius',
+      hours: [
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        }
+      ]
+    }
+  ];
+  let kaunasStores = [
+    {
+      id: 17,
+      title: 'Smuflandas',
+      city: 'Kaunas',
+      hours: [
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        },
+        {
+          from: 12,
+          to: 20
+        }
+      ]
+    }
+  ];
+  let nowIs = {
+    day: 6, // sunday is 6 monday is 0
+    time: 14
+  };
+  expect(filterStores(initialStores, { city: 'Vilnius', hours: 'openNow' }, nowIs)).toEqual(vilniusStores);
+  expect(filterStores(initialStores, { city: 'Kaunas', hours: 'openNow' }, nowIs)).toEqual(kaunasStores);
+});
+
+test('Create nowIs object suitable for filterStores', () => {
+  let now = new Date('Fri Apr 27 2018 15:00');
+  expect(calcNow(now)).toEqual({
+    day: 4,
+    time: 15
+  });
 });
