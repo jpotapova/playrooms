@@ -128,7 +128,8 @@ class App extends Component {
     filters[prop] = value;
     // prepare new state obj by filtering the stores
     let newState = {
-      visibleStores: filterStores(storeData.stores, filters, calcNow(new Date(Date.now())))
+      visibleStores: filterStores(storeData.stores, filters, calcNow(new Date(Date.now()))),
+      openStore: -1
     };
     newState[prop] = value;
     // set the state with new filters and newly filtered stores
